@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
+import {connect} from "react-redux";
 
 import UnderConstruction from './screens/UnderConstruction';
 
 import './App.css';
+import Kitkard from "./Kitkard";
 require('./styles/app.scss');
 
 const UNDER_CONSTRUCTION = false;
 
 class App extends Component {
-    static propTypes = {
-        cookies: instanceOf(Cookies).isRequired
-    };
-
 
     render() {
         return (
             <div className="App">
 
                 {
-                    UNDER_CONSTRUCTION ? <UnderConstruction/> :
-                        null
+                    UNDER_CONSTRUCTION ?
+                        <UnderConstruction/>
+                        :
+                        <Kitkard className={"full-size"}/>
                 }
 
             </div>
@@ -29,4 +27,14 @@ class App extends Component {
     }
 }
 
-export default withCookies(App);
+// export default withCookies(App);
+const mapStateToProps = state => ({
+    // email: state.email,
+});
+
+const mapDispatchToProps = dispatch => ({
+    // setUser: user => dispatch(setUser(user)),
+
+});
+
+export default connect( mapStateToProps, mapDispatchToProps )(App)
