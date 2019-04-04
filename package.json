@@ -1,11 +1,13 @@
 {
   "name": "kitkard-web",
-  "version": "0.1.0",
+  "version": "2.1.0",
+  "build": "210",
   "private": true,
   "dependencies": {
     "antd": "^3.16.1",
     "antd-mobile": "^2.2.11",
     "detect-browser-language": "^0.0.1",
+    "icomoon-react": "^1.0.0",
     "node-sass": "^4.9.4",
     "prop-types": "latest",
     "react-adaptive": "^2.0.2",
@@ -36,6 +38,7 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
+    "babel-plugin-import": "^1.11.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
@@ -46,13 +49,7 @@
     "style-loader": "^0.23.1"
   },
   "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "antd",
-        "libraryDirectory": "es",
-        "style": "css"
-      }
-    ]
+    ["import", { "libraryName": "antd", "libraryDirectory": "lib"}, "ant"],
+    ["import", { "libraryName": "ant-mobile", "libraryDirectory": "lib"}, "ant-mobile"]
   ]
 }

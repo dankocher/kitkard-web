@@ -1,12 +1,12 @@
-import React, { Component, Fragment } from 'react';
-// import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { Flex, WhiteSpace, WingBlank } from 'antd-mobile';
+import React, { Component } from 'react';
+import { Flex, Button } from 'antd-mobile';
 
 import {connect} from "react-redux";
 import {setTheme} from "../../redux/actions";
 import colors from "../../constants/colors";
-// import {KitIcon} from "../KitIcon";
-import styles from "../../styles/TabBarItem.scss";
+import KitIcon from "../KitIcon";
+
+import '../../styles/TabBarItem.scss';
 
 class TabBarItem extends Component {
 
@@ -15,14 +15,10 @@ class TabBarItem extends Component {
         const color = colors[theme];
 
         return (
-            <Flex.Item style={[styles.item, {backgroundColor: color.tabBar}]}>
-
-                {/*<TouchableOpacity style={styles.button} activeOpacity={1} onPress={() => this.props.onSelect(icon)}>*/}
-                    {/*<Flex style={styles.buttonContent}>*/}
-                        {/*a*/}
-                        {/*/!*<KitIcon name={icon} color={selected ? color.primary : color.icon} size={25}/>*!/*/}
-                    {/*</Flex>*/}
-                {/*</TouchableOpacity>*/}
+            <Flex.Item className="tabBar-item" style={{backgroundColor: color.tabBar}}>
+                <Button className={'item-button'} onClick={() => this.props.onSelect(icon)}>
+                    <KitIcon name={icon} color={selected ? color.primary : color.icon} size={25} />
+                </Button>
             </Flex.Item>
         );
     }

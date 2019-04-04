@@ -1,13 +1,16 @@
-.item {
+.tabBar-item {
   flex: 1;
   height: 100%;
-  width: 100%;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  display: inline-flex;
 };
-.button {
+.item-button {
   width: 100%;
   height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 };
 .buttonContent {
   flex: 1;

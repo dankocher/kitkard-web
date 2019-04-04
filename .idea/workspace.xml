@@ -2,49 +2,117 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297c40bb-477e-4ff0-8525-225fbe9657ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kitkard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Desktop/TabBarComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/KitIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Mobile/Content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Mobile/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Mobile/TabBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Mobile/TabBarComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Mobile/TabBarIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Mobile/TabBarItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/contacts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/size.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Desktop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/cards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/friends.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/language.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/notifications.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/pictures.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/screen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/selectedCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/session.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/share.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Mobile.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/MobileContent.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/MobileHeader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/MobileTabBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/TabBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/TabBarItem.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/address.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/fb_messenger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/flickr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/google_plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/hangouts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/icq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/kitkard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/kitkard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/livejournal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/myspace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/odnoklassniki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/pinterest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/requisites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/skype.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/sms.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/snapchat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/telegram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/tumblr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/viber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/vk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/website.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/wechat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/whatsapp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/contacts/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/SpaceMono-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/kitkard_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo_round_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo_round_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/splash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/selection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/address.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/fb_messenger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/flickr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/google_plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/hangouts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/icq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/kitkard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/kitkard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/livejournal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/myspace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/odnoklassniki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/pinterest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/requisites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/skype.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/sms.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/snapchat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/telegram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/tumblr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/viber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/vk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/website.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/wechat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/whatsapp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contacts/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/SpaceMono-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/kitkard_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logo_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logo_round_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logo_round_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/splash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/selection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ScrollView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SettingsScreen/SettingsHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SettingsScreen/SettingsItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SettingsScreen/SettingsSeparator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SettingsScreen/SettingsVersion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/Settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/KitIcon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/ScrollView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Settings.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/SettingsItem.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/translations/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/KitIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KitIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Mobile/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mobile/Content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Mobile/TabBarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mobile/TabBarItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Mobile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/MobileContent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MobileContent.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/TabBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/TabBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/TabBarItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/TabBarItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/es.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/ru.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,102 +124,98 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5999108">
+    <splitter split-orientation="horizontal" split-proportion="0.5401427">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/App.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Kitkard.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="104">
-                  <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/containers/Mobile.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                    <element signature="e#129#172#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Mobile/Header.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="130">
-                  <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/styles/MobileHeader.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Mobile/Content.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+                <state relative-caret-position="280">
+                  <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/styles/MobileContent.scss">
+            <entry file="file://$PROJECT_DIR$/src/screens/Settings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="56">
-                  <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+                <state relative-caret-position="468">
+                  <caret line="129" column="107" lean-forward="true" selection-start-line="129" selection-start-column="107" selection-end-line="129" selection-end-column="107" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Mobile/TabBarItem.js">
+            <entry file="file://$PROJECT_DIR$/src/components/SettingsScreen/SettingsSeparator.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="182">
-                  <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="8" selection-end-column="50" />
+                <state relative-caret-position="432">
+                  <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
                   <folding>
-                    <element signature="e#122#180#0" expanded="true" />
+                    <element signature="e#0#51#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/SettingsScreen/SettingsItem.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="456">
+                  <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/SettingsScreen/SettingsHeader.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="400">
+                  <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+                  <folding>
+                    <element signature="e#0#51#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/ScrollView.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="224">
+                  <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/SettingsScreen/SettingsVersion.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="435">
+                  <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#0#51#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="93">
+                  <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -164,16 +228,16 @@
             <entry file="file://$PROJECT_DIR$/src/styles/Mobile.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="111">
-                  <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+                  <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/styles/TabBar.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="168">
-                  <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+                  <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -181,8 +245,44 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/styles/TabBarItem.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+                <state relative-caret-position="26">
+                  <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/styles/SettingsItem.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/translations/ru.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="25" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/styles/ScrollView.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="124">
+                  <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/assets/selection.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="14" selection-start-column="14" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -201,9 +301,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>'center'</find>
+      <find>,</find>
+      <find>current_langage</find>
     </findStrings>
     <replaceStrings>
       <replace>center</replace>
+      <replace>;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -229,25 +332,39 @@
         <option value="$PROJECT_DIR$/src/screens/UnderConstruction.js" />
         <option value="$PROJECT_DIR$/src/styles/UnderContruction.scss" />
         <option value="$PROJECT_DIR$/src/containers/Desktop.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/styles/MobileTabBar.less" />
         <option value="$PROJECT_DIR$/src/components/Desktop/TabBarComponent.js" />
         <option value="$PROJECT_DIR$/src/styles/TabBarItem.less" />
-        <option value="$PROJECT_DIR$/src/components/Mobile/TabBarItem.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/styles/app.scss" />
         <option value="$PROJECT_DIR$/src/styles/Mobile.less" />
         <option value="$PROJECT_DIR$/src/styles/TabBar.less" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Kitkard.js" />
         <option value="$PROJECT_DIR$/src/components/Mobile/TabBar.js" />
-        <option value="$PROJECT_DIR$/src/styles/TabBar.scss" />
-        <option value="$PROJECT_DIR$/src/components/Mobile/Content.js" />
         <option value="$PROJECT_DIR$/src/styles/MobileHeader.scss" />
         <option value="$PROJECT_DIR$/src/components/Mobile/Header.js" />
-        <option value="$PROJECT_DIR$/src/containers/Mobile.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/styles/TabBar.scss" />
+        <option value="$PROJECT_DIR$/src/styles/KitIcon.scss" />
+        <option value="$PROJECT_DIR$/src/components/KitIcon.js" />
+        <option value="$PROJECT_DIR$/src/styles/TabBarItem.scss" />
+        <option value="$PROJECT_DIR$/src/components/Mobile/TabBarItem.js" />
         <option value="$PROJECT_DIR$/src/styles/MobileContent.scss" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/theme.js" />
+        <option value="$PROJECT_DIR$/src/containers/Mobile.js" />
+        <option value="$PROJECT_DIR$/src/components/Mobile/Content.js" />
+        <option value="$PROJECT_DIR$/src/styles/Settings.scss" />
+        <option value="$PROJECT_DIR$/src/styles/ScrollView.scss" />
+        <option value="$PROJECT_DIR$/src/styles/SettingsItem.js" />
+        <option value="$PROJECT_DIR$/src/styles/SettingsItem.scss" />
+        <option value="$PROJECT_DIR$/src/components/SettingsScreen/SettingsHeader.js" />
+        <option value="$PROJECT_DIR$/src/components/ScrollView.js" />
+        <option value="$PROJECT_DIR$/src/components/SettingsScreen/SettingsSeparator.js" />
+        <option value="$PROJECT_DIR$/src/components/SettingsScreen/SettingsItem.js" />
+        <option value="$PROJECT_DIR$/src/components/SettingsScreen/SettingsVersion.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/screens/Settings.js" />
       </list>
     </option>
   </component>
@@ -318,18 +435,38 @@
             <path>
               <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SettingsScreen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="translations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -345,8 +482,11 @@
     <property name="javascript.nodejs.core.library.configured.version" value="11.5.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -356,18 +496,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/constants" />
       <recent name="$PROJECT_DIR$/src/components/Mobile" />
-      <recent name="$PROJECT_DIR$/src/redux" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/public/locales/ru" />
       <recent name="$PROJECT_DIR$/public/locales/es" />
-      <recent name="$PROJECT_DIR$/public/locales/en" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -431,12 +571,20 @@
       <workItem from="1541012549207" duration="17717000" />
       <workItem from="1544010715949" duration="3489000" />
       <workItem from="1554350592309" duration="5671000" />
-      <workItem from="1554372064256" duration="11237000" />
+      <workItem from="1554372064256" duration="19952000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Redux, added adaptive">
+      <created>1554390193618</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554390193618</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38114000" />
+    <option name="totallyTimeSpent" value="46829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1916" y="30" width="2568" height="1414" extended-state="6" />
@@ -477,51 +625,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Redux, added adaptive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Redux, added adaptive" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logo_white.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/favicon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/kitkard_white.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/facebook.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/google.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/i18n.js" />
-    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/meta.html" />
-    <entry file="file://$PROJECT_DIR$/src/translations/en.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/translations/es.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/translations/ru.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/Loader.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -602,23 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -647,26 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/KitIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="64" lean-forward="true" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/TabBarItem.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -684,106 +755,272 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Mobile/TabBarItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="8" selection-end-column="50" />
-          <folding>
-            <element signature="e#122#180#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/Mobile.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/TabBar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kitkard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Mobile/TabBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="62" column="15" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="15" />
-          <folding>
-            <element signature="e#220#267#0" expanded="true" />
-          </folding>
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/MobileHeader.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/TabBar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/selection.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/KitIcon.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/KitIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Mobile/TabBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="52" selection-start-line="52" selection-end-line="66" />
+          <folding>
+            <element signature="e#220#267#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Mobile/Header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Mobile.js">
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/theme.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#129#172#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="45" selection-start-column="31" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Mobile/Content.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Mobile/TabBarItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state>
+          <caret column="41" lean-forward="true" selection-start-column="41" selection-end-line="1" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/MobileContent.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="165">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Mobile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/Settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/translations/en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kitkard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/ScrollView.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/SettingsItem.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/TabBarItem.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ScrollView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SettingsScreen/SettingsVersion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/SettingsItem.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/translations/ru.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SettingsScreen/SettingsSeparator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/language.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Mobile/Content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SettingsScreen/SettingsHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SettingsScreen/SettingsItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="129" column="107" lean-forward="true" selection-start-line="129" selection-start-column="107" selection-end-line="129" selection-end-column="107" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
