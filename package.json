@@ -49,7 +49,21 @@
     "style-loader": "^0.23.1"
   },
   "plugins": [
-    ["import", { "libraryName": "antd", "libraryDirectory": "lib"}, "ant"],
-    ["import", { "libraryName": "ant-mobile", "libraryDirectory": "lib"}, "ant-mobile"]
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "lib"
+      },
+      "ant"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "ant-mobile",
+        "libraryDirectory": "lib"
+      },
+      "ant-mobile"
+    ]
   ]
 }

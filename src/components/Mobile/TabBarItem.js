@@ -16,9 +16,9 @@ class TabBarItem extends Component {
 
         return (
             <Flex.Item className="tabBar-item" style={{backgroundColor: color.tabBar}}>
-                <Button className={'item-button'} onClick={() => this.props.onSelect(icon)}>
+                <div className={'item-button'} onClick={() => this.props.onSelect(icon)}>
                     <KitIcon name={icon} color={selected ? color.primary : color.icon} size={25} />
-                </Button>
+                </div>
             </Flex.Item>
         );
     }

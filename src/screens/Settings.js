@@ -118,6 +118,9 @@ class Content extends Component {
         const color = colors[theme];
         const t = translate[language];
 
+        console.log(getText(t, "current_language"));
+        console.log(t);
+
         return (
             <div className={"settings"}>
                 <ScrollView style={{ flex: 1, width: '100%', backgroundColor: color.background}}>
@@ -166,6 +169,7 @@ class Content extends Component {
 const mapStateToProps = state => ({
     theme: state.theme,
     screen: state.screen,
+    language: state.language,
 });
 
 const mapDispatchToProps = dispatch => ({

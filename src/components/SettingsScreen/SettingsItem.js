@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import {Button} from 'antd-mobile';
+import {Switch} from 'antd';
 import {connect} from "react-redux";
 import {setTheme} from "../../redux/actions";
 import colors from "../../constants/colors";
 import KitIcon from "../KitIcon";
 import translate, {getText} from "../../translations";
 // import KitIcon from "KitIcon";
-
-import '../../styles/SettingsItem.scss'
 
 class SettingsItem extends Component {
 
@@ -20,23 +18,23 @@ class SettingsItem extends Component {
         const icon = this.props.icon || item;
 
         return (
-            <div className={"settings-item"}>
-                <Button
+            <div className={"settings-item"} style={{borderBottom: separator === false ? 'none' : '1px solid ' + color.border}}>
+                <div
                     className={"settings-item-button"}
                     onClick={() => onPress(item)}
-                    style={{backgroundColor: color.background}}>
+                >
                     <KitIcon name={icon} size={20} color={color.icon}/>
-                    <span style={{color: color.text, fontSize: 16, marginLeft: 10, flex: 1}}>{getText(t, title)}</span>
-                    <span style={{color: color.text, fontSize: 16, marginLeft: 10}}>{rightText}</span>
-                    {/*{*/}
-                        {/*status === undefined ? null :*/}
-                            {/*<Switch checked={status} onChange={() => onPress(item)} color={color.primary}/>*/}
-                    {/*}*/}
-                </Button>
-                {
-                    separator === false ? null : <div style={{backgroundColor: color.border, height: 0.5, width: '100%'}}/>
-                }
-
+                    <div className="button-container">
+                        <div style={{color: color.text, fontSize: 16, marginLeft: 10, textAlign: 'left'}}>{getText(t, title)}</div>
+                        {rightText === undefined || rightText === "" ? null :
+                            <div style={{color: color.text, fontSize: 16, marginLeft: 10}}>{rightText}</div>
+                        }
+                        {
+                            status === undefined ? null :
+                                <div style={{width: 50, height: '100%'}}><Switch checked={status} onChange={() => onPress(item)} color={color.primary}/></div>
+                        }
+                    </div>
+                </div>
             </div>
         );
     }

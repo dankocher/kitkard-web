@@ -13,9 +13,7 @@ class SettingsItem extends Component {
         const t = translate[language];
 
         return (
-            <div style={[styles.container, {
-                backgroundColor: color.border
-            }]}>
+            <div className="settings-header" style={{backgroundColor: color.border}}>
                 <span style={{color: color.textSoft, fontSize: 13}}>{getText(t, title)}</span>
             </div>
         );
@@ -36,14 +34,3 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(SettingsItem)
-
-const styles = {
-    container: {
-        flex: 1,
-        width: '100%',
-        height: 28,
-        justifyContent: 'center',
-        // alignItems: 'center',
-        paddingLeft: 10
-    }
-};
