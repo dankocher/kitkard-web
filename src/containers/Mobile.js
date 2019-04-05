@@ -4,7 +4,6 @@ import '../styles/Mobile.scss';
 import Content from "../components/Mobile/Content";
 import TabBar from "../components/Mobile/TabBar";
 
-
 class Mobile extends Component {
 
     render() {

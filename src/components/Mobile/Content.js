@@ -5,18 +5,19 @@ import {setScreen} from "../../redux/actions";
 import connect from "react-redux/es/connect/connect";
 
 import Settings from "../../screens/Settings";
+import Home from "../../screens/Home";
 
 class Content extends Component {
 
     componentWillMount() {
-        this.props.setScreen("settings")
+        // this.props.setScreen("settings")
     }
 
     getScreen = () => {
         switch(this.props.screen) {
             case 'settings': return <Settings/>;
             case 'notifications': return <div>Notifications</div>;
-            case 'my_cards': return <div>My Cards</div>;
+            case 'my_cards': return <Home/>;
             case 'search': return <div>Search</div>;
             case 'cardholder': return <div>Cardholder</div>;
             default: return null;
