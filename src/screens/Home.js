@@ -18,7 +18,7 @@ class Home extends Component {
         } else if (user.cards === undefined || user.cards.length === 0) {
             return <CreateCard/>
         } else {
-            return null;//<MyCards navigation={this.props.navigation}/>
+            return <div>TODO: My Cards</div>;//<MyCards/>
             // return null
         }
     };
