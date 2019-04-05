@@ -64,7 +64,29 @@ class SignIn extends Component {
             this.registration();
         }
     };
-
+    registration = async () => {
+        this.setState({spinner: true});
+        let hash = md5(this.state.password);
+        let res = await ajax(api.registration, {
+            email: this.state.email,
+            password: hash,
+        });
+        if (res.ok) {
+            this.setState({spinner: false});
+            this.props.setUser(res.user);
+            this.props.setSession(res.session);
+        } else {
+            const t = translate[this.props.language];
+            let text = 'ERROR';
+            switch (res.status) {
+                case "incorrect": text = t.incorrect_email; break;
+                case "exist": text = t.user_exist; break;
+                case "unreachable": text = t.unreachable; break;
+            }
+            this.setState({spinner: false});
+            Modal.alert(null, text, [ { text: t.ok, onPress: () => {return false;}, style: 'cancel' }] )
+        }
+    };
     login = async () => {
         this.setState({spinner: true});
         let hash = md5(this.state.password);
