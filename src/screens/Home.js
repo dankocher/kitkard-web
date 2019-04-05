@@ -5,6 +5,7 @@ import connect from "react-redux/es/connect/connect";
 import '../styles/Home.scss';
 import colors from "../constants/colors";
 import SignIn from "../views/SignIn";
+import CreateCard from "../views/CreateCard";
 
 
 class Home extends Component {
@@ -15,7 +16,7 @@ class Home extends Component {
         if(user == null || session == null) {
             return <SignIn/>;
         } else if (user.cards === undefined || user.cards.length === 0) {
-            return null;//<CreateCard/>
+            return <CreateCard/>
         } else {
             return null;//<MyCards navigation={this.props.navigation}/>
             // return null
