@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import {Switch} from 'antd';
 import {connect} from "react-redux";
-import {setTheme} from "../../redux/actions";
 import colors from "../../constants/colors";
 import KitIcon from "../KitIcon";
 import translate, {getText} from "../../translations";
-// import KitIcon from "KitIcon";
 
 class SettingsItem extends Component {
 

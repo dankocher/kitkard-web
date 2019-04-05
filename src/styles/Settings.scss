@@ -43,3 +43,16 @@
   display: inline-flex;
   //background-color: gray
 }
+
+.settings-version {
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  .text {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}

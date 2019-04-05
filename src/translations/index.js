@@ -20,7 +20,7 @@ export const tr = (alias, params) => {
     if (text !== undefined && text !== "") {
         return text;
     } else {
-        console.log(alias);
+        // console.log(alias);
         return alias
     }
 };
@@ -29,7 +29,7 @@ export const getText = (t, alias, params) => {
     if (t !== undefined && t[alias] !== undefined) {
         return tr(t[alias], params);
     } else {
-        console.log(alias);
+        // console.log(alias);
         return alias;
     }
 };

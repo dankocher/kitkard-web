@@ -1,7 +1,5 @@
-import React, { Component, Fragment } from 'react';
-// import { Platform, StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
-// import { Flex, WhiteSpace, WingBlank } from '@ant-design/react-native';
-import { Flex, WhiteSpace } from 'antd-mobile';
+import React, { Component } from 'react';
+import { Flex } from 'antd-mobile';
 
 import {connect} from "react-redux";
 import {setScreen} from "../../redux/actions";

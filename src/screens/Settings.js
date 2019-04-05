@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Modal } from 'antd-mobile';
 
 import '../styles/Settings.scss';
-import {setLanguage, setScreen, setTheme} from "../redux/actions";
+import {setLanguage, setTheme} from "../redux/actions";
 import connect from "react-redux/es/connect/connect";
 import colors from "../constants/colors";
 import translate, {getText} from "../translations";
@@ -117,9 +117,6 @@ class Content extends Component {
         const {theme, language} = this.props;
         const color = colors[theme];
         const t = translate[language];
-
-        console.log(getText(t, "current_language"));
-        console.log(t);
 
         return (
             <div className={"settings"}>

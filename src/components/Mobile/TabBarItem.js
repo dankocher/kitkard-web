@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Flex, Button } from 'antd-mobile';
+import { Flex } from 'antd-mobile';
 
 import {connect} from "react-redux";
 import {setTheme} from "../../redux/actions";

@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import {connect} from "react-redux";
-import {setLanguage, setTheme, setUser} from "../../redux/actions";
 import colors from "../../constants/colors";
 import SettingsSeparator from "./SettingsSeparator";
 
@@ -17,12 +16,12 @@ class SettingsVersion extends Component {
         const t = translate[language];
 
         return (
-            <div style={[styles.container, {backgroundColor: color.border}]}>
+            <div className='settings-version' style={{backgroundColor: color.border}}>
                 <SettingsSeparator title=""/>
-                <div style={[styles.text, {color: color.textSoft}]}>
+                <div className='text' style={{color: color.textSoft}}>
                     {getText(t, "version", {version: __package.version, build: __package.build})}
                 </div>
-                <div style={[styles.text, {color: color.textSoft}]}>
+                <div className='text' style={{color: color.textSoft}}>
                     {getText(t, "copyright", {year: new Date().getFullYear()})}
                 </div>
             </div>
@@ -38,18 +37,3 @@ const mapStateToProps = state => ({
 export default connect(
     mapStateToProps
 )(SettingsVersion)
-
-const styles = ({
-    container: {
-        flex: 1,
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        paddingBottom: 15,
-        paddingTop: 5
-    },
-    text: {
-        fontSize: 12,
-        marginTop: 10,
-    }
-});

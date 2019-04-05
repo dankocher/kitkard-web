@@ -6,7 +6,8 @@ import UnderConstruction from 'detect-browser-language';
 import './App.css';
 import Kitkard from "./Kitkard";
 import detectBrowserLanguage from "detect-browser-language";
-import {setLanguage} from "./redux/actions";
+import {setLanguage, setTheme} from "./redux/actions";
+import getValueOrDefault from "./utils/getValueOrDefault";
 require('./styles/app.scss');
 
 const UNDER_CONSTRUCTION = false;
@@ -14,14 +15,54 @@ const UNDER_CONSTRUCTION = false;
 class App extends Component {
 
     componentDidMount() {
-        if (this.props.language === "none") {
-            let language = detectBrowserLanguage();
-            language = language.split("-")[0];
-            switch (language) {
-                case "ru": case "es": case "en": break;
-                default: language = 'en'; break;
-            }
-            this.props.setLanguage(language);
+        this.getStateFromLS();
+        window.addEventListener(
+            "beforeunload",
+            this.saveStateToLocalStorage.bind(this)
+        );
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener(
+            "beforeunload",
+            this.saveStateToLocalStorage.bind(this)
+        );
+
+        this.saveStateToLocalStorage();
+    }
+
+    saveStateToLocalStorage(){
+        this.saveToLocalStorage('language', this.props.language, false);
+        this.saveToLocalStorage('theme', this.props.theme, false);
+        // this.saveToLocalStorage('user', this.props.user, true);
+        // this.saveToLocalStorage('session', this.props.session, false);
+    }
+
+    async getStateFromLS(){
+
+        let language = await localStorage.getItem('language');
+        await this.props.setLanguage(getValueOrDefault(language, detectBrowserLanguage().split("-")[0]));
+
+        let theme = await localStorage.getItem('theme');
+        await this.props.setTheme(getValueOrDefault(theme, "light"));
+
+
+        // let user = await localStorage.getItem('user');
+        // let session = await localStorage.getItem('session');
+
+
+        // await this.props.setUser(JSON.parse(user));
+        // await this.props.setSession(session);
+
+
+    }
+
+    saveToLocalStorage(name, value, isObject){
+        if (value == null){
+            localStorage.removeItem(name)
+        } else {
+            value = isObject ? JSON.stringify(value) : value;
+            localStorage.setItem(name, value);
         }
     }
 
@@ -44,10 +85,12 @@ class App extends Component {
 // export default withCookies(App);
 const mapStateToProps = state => ({
     language: state.language,
+    theme: state.theme,
 });
 
 const mapDispatchToProps = dispatch => ({
     setLanguage: language => dispatch(setLanguage(language)),
+    setTheme: theme => dispatch(setTheme(theme)),
 
 });
 
