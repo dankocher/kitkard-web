@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Modal } from 'antd-mobile';
 
 import '../styles/Settings.scss';
-import {setLanguage, setTheme} from "../redux/actions";
+import {setLanguage, setSession, setTheme, setUser} from "../redux/actions";
 import connect from "react-redux/es/connect/connect";
 import colors from "../constants/colors";
 import translate, {getText} from "../translations";
@@ -10,6 +10,8 @@ import ScrollView from "../components/ScrollView";
 import SettingsItem from "../components/SettingsScreen/SettingsItem";
 import SettingsSeparator from "../components/SettingsScreen/SettingsSeparator";
 import SettingsVersion from "../components/SettingsScreen/SettingsVersion";
+import {api} from "../constants/api";
+import ajax from "../utils/ajax";
 
 class Content extends Component {
 
@@ -18,21 +20,21 @@ class Content extends Component {
     };
 
     logout = async () => {
-        // const t = translate[this.props.language];
-        // Modal.alert(null, t.logout_confirm, [
-        //     { text: t.no, onPress: () => {return false;}, style: 'cancel' },
-        //     { text: t.yes, onPress: async () => {
-        //             try { await firebase.auth().signOut(); } catch(e) { }
-        //             try { await GoogleSignin.signOut(); } catch(e) { }
-        //             try { await LoginManager.logOut(); } catch(e) { }
-        //             ajax(api.logout, {session: this.props.session});
-        //             this.props.setUser(null);
-        //             this.props.setSession(null);
-        //             this.props.selectCard(null);
-        //             this.props.setFriends([]);
-        //             this.props.setNotifications([]);
-        //         }},
-        // ]);
+        const t = translate[this.props.language];
+        Modal.alert(null, t.logout_confirm, [
+            { text: t.no, onPress: () => {return false;}, style: 'cancel' },
+            { text: t.yes, onPress: async () => {
+                    // try { await firebase.auth().signOut(); } catch(e) { }
+                    // try { await GoogleSignin.signOut(); } catch(e) { }
+                    // try { await LoginManager.logOut(); } catch(e) { }
+                    ajax(api.logout, {session: this.props.session});
+                    this.props.setUser(null);
+                    this.props.setSession(null);
+                    // this.props.selectCard(null);
+                    // this.props.setFriends([]);
+                    // this.props.setNotifications([]);
+                }},
+        ]);
     };
 
     clearCache = async () => {
@@ -142,15 +144,16 @@ class Content extends Component {
                     <SettingsSeparator title="documentation"/>
                     <SettingsItem item="about_kitkard"  onPress={this.action} icon={"kitkard_round"}/>
                     <SettingsItem item="policy"         onPress={this.action}/>
-                    <SettingsItem item="terms"          onPress={this.action}/>
+                    <SettingsItem item="terms"          onPress={this.action} separator={false}/>
                     {/*<SettingsItem item="permissions"    onPress={this.action} icon={"terms"} separator={false}/>*/}
 
                     {
                         this.props.user == null ? null :
                             (
-                                <div><SettingsSeparator title=""/>
+                                <span>
+                                <SettingsSeparator title=""/>
                                     <SettingsItem item="logout"         onPress={this.action} separator={false}/>
-                                </div>
+                                </span>
                             )
                     }
                     <SettingsVersion/>
@@ -167,11 +170,14 @@ const mapStateToProps = state => ({
     theme: state.theme,
     screen: state.screen,
     language: state.language,
+    user: state.user,
 });
 
 const mapDispatchToProps = dispatch => ({
     setTheme: theme => dispatch(setTheme(theme)),
     setLanguage: language => dispatch(setLanguage(language)),
+    setUser: user => dispatch(setUser(user)),
+    setSession: session => dispatch(setSession(session)),
 });
 
 export default connect(

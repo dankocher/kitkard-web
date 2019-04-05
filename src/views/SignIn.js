@@ -15,8 +15,8 @@ const md5 = require('md5');
 
 class SignIn extends Component {
     state = {
-        email: "dankocher@mail.ru",
-        password: "111111",
+        email: "",
+        password: "",
         enabled: false,
         socialEnabled: true,
         spinner: false,
