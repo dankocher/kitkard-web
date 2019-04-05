@@ -4,6 +4,7 @@ import KitIcon from './KitIcon';
 // import { View, StyleSheet, TextInput } from 'react-native';
 // import { InputItem } from 'antd-mobile';
 import '../styles/PasswordInput.scss';
+import PropTypes from "prop-types";
 
 export default class PasswordInputText extends React.Component {
 
@@ -37,17 +38,20 @@ export default class PasswordInputText extends React.Component {
 
 
     render() {
+        const {onChange, iconSize} = this.props;
+
         return (
             <div className={'passwordView'}>
                 <input className={'password'}
-                           {...this.props}
-                            onChange={(e, text) => this.props.onChangeText(text)}
-                           type={this.state.password ? 'password' : 'text'}/>
+                       placeholder={this.props.placeholder}
+                       onChange={(evt) => onChange(evt.target.value)}
+                       value={this.props.value}
+                       type={this.state.password ? 'password' : 'text'}/>
                <div className='toggle-password'
                     onClick={this.changePwdType}>
                     <KitIcon className={'icon'}
                           name={this.state.icEye}
-                          size={this.props.iconSize}
+                          size={iconSize}
                           color={'white'}
                     />
                </div>
@@ -57,6 +61,7 @@ export default class PasswordInputText extends React.Component {
 }
 
 PasswordInputText.defaultProps = {
-    iconSize:25,
+    onChange: PropTypes.Function,
+    iconSize: 25,
 };
 

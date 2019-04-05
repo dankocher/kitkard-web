@@ -38,6 +38,8 @@ const mapStateToProps = state => ({
     theme: state.theme,
     screen: state.screen,
     language: state.language,
+    user: state.user,
+    session: state.session,
 });
 
 const mapDispatchToProps = dispatch => ({

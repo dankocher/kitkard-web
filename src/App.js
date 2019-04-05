@@ -6,7 +6,7 @@ import UnderConstruction from 'detect-browser-language';
 import './App.css';
 import Kitkard from "./Kitkard";
 import detectBrowserLanguage from "detect-browser-language";
-import {setLanguage, setTheme} from "./redux/actions";
+import {setLanguage, setSession, setTheme, setUser} from "./redux/actions";
 import getValueOrDefault from "./utils/getValueOrDefault";
 require('./styles/app.scss');
 
@@ -34,8 +34,8 @@ class App extends Component {
     saveStateToLocalStorage(){
         this.saveToLocalStorage('language', this.props.language, false);
         this.saveToLocalStorage('theme', this.props.theme, false);
-        // this.saveToLocalStorage('user', this.props.user, true);
-        // this.saveToLocalStorage('session', this.props.session, false);
+        this.saveToLocalStorage('user', this.props.user, true);
+        this.saveToLocalStorage('session', this.props.session, false);
     }
 
     async getStateFromLS(){
@@ -47,8 +47,13 @@ class App extends Component {
         await this.props.setTheme(getValueOrDefault(theme, "light"));
 
 
-        // let user = await localStorage.getItem('user');
-        // let session = await localStorage.getItem('session');
+        let user = getValueOrDefault(await localStorage.getItem('user'), null);
+        if (user !== null) {
+            await this.props.setUser(JSON.parse(user));
+        }
+
+        let session = await localStorage.getItem('session');
+        await this.props.setSession(getValueOrDefault(session, null));
 
 
         // await this.props.setUser(JSON.parse(user));
@@ -86,11 +91,15 @@ class App extends Component {
 const mapStateToProps = state => ({
     language: state.language,
     theme: state.theme,
+    user: state.user,
+    session: state.session,
 });
 
 const mapDispatchToProps = dispatch => ({
     setLanguage: language => dispatch(setLanguage(language)),
     setTheme: theme => dispatch(setTheme(theme)),
+    setUser: user => dispatch(setUser(user)),
+    setSession: session => dispatch(setSession(session)),
 
 });
 

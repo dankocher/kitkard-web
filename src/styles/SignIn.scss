@@ -19,6 +19,9 @@
     color: white;
     font-size: 16px;
     border: none;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
   };
 
   .buttonRegister {
@@ -40,7 +43,11 @@
     background-color: transparent;
     height: 48px;
     margin-top: 10px;
-    border-radius: 10px
+    border-radius: 10px;
+    border: none;
+    &::before {
+      border: 0 solid transparent !important;
+    }
   };
   .socialButtons {
     margin-top: 30px;
@@ -58,7 +65,7 @@
   };
   .social_button_container {
     width: 100%;
-    flex-direction: row
+    display: inline-flex;
   };
   .social_image {
     width: 30px;
@@ -66,6 +73,7 @@
     margin: 9px;
   };
   .social_text {
+    width: 270px;
     color: gray;
     font-size: 18px;
     flex: 1;

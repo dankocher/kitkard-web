@@ -19,14 +19,14 @@ class TabBar extends Component {
                 case "notifications":
                     console.log('Notifications');
                     break;
-                case "my_cards":
-                    console.log('Home');
-                    break;
                 case "search":
                     console.log('Search');
                     break;
                 case "cardholder":
                     console.log('Cardholder');
+                    break;
+                default: case "my_cards":
+                    console.log('Home');
                     break;
 
             }
