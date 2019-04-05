@@ -12,6 +12,7 @@ import SettingsSeparator from "../components/SettingsScreen/SettingsSeparator";
 import SettingsVersion from "../components/SettingsScreen/SettingsVersion";
 import {api} from "../constants/api";
 import ajax from "../utils/ajax";
+import SettingsHeader from "../components/SettingsScreen/SettingsHeader";
 
 class Content extends Component {
 
@@ -124,7 +125,7 @@ class Content extends Component {
             <div className={"settings"}>
                 <ScrollView style={{ flex: 1, width: '100%', backgroundColor: color.background}}>
 
-                    {/*<SettingsHeader/>*/}
+                    <SettingsHeader/>
                     {/*<SettingsItem item="cardholder"     onPress={this.action}/>*/}
                     {/*<SettingsItem item="keepers"        onPress={this.action} separator={false}/>*/}
 

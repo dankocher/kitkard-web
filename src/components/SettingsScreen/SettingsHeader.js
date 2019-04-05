@@ -1,48 +1,49 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import {connect} from "react-redux";
 import {setTheme} from "../../redux/actions";
 import colors from "../../constants/colors";
-// import ImageOffline from "../ImageOffline";
-// import KitIcon from "KitIcon";
+import ImageOffline from "../ImageOffline";
 
 
 class SettingsHeader extends Component {
 
     render() {
-        const {theme, user} = this.props;
-        const color = colors[theme];
+        const {user} = this.props;
 
         const card = user !== null ? this.props.cards[user.username] : undefined;
         const email = user !== null ? user.email : "";
         const username = user !== null ? '+'+user.username : "";
         return (
-            <div style={[styles.titleContainer, {backgroundColor: color.primary}]}>
+            <div style={styles.titleContainer}>
                 <div style={styles.titleIconContainer}>
-                    {/*<AppIconPreview iconUrl={card.pictures[0]}/>*/}
-                    {/*<ImageOffline style={{ width: 80, height: 80, borderRadius: 40 }} card={card} size={80} rounder={true} alpha={false}/>*/}
+                    <ImageOffline style={{ width: 80, height: 80, borderRadius: 40 }} card={card} size={80} rounder={true} alpha={false}/>
                 </div>
 
                 <div style={styles.titleTextContainer}>
                     {
                         card === undefined || card.name === "" ? null :
-                        <span style={styles.nameText} numberOfLines={1}>
+                        <div style={styles.nameText} >
                             {card.name}
-                        </span>
+                        </div>
                     }
-                    <span style={styles.emailText} numberOfLines={1}>
-                        {email}
-                    </span>
-
-                    <span style={styles.descriptionText}>
-                        {username}
-                    </span>
+                    {
+                        user === undefined || user === null ? null :
+                            <div style={styles.emailText}>
+                                {email}
+                            </div>
+                    }
+                    {
+                        user === undefined || user === null || user.username === undefined || user.username === "" ? null :
+                            <div style={styles.descriptionText}>
+                                {username}
+                            </div>
+                    }
                 </div>
             </div>
         );
     }
 }
-
 
 const mapStateToProps = state => ({
     user: state.user,
@@ -60,18 +61,26 @@ export default connect(
     mapDispatchToProps
 )(SettingsHeader)
 
-const styles = StyleSheet.create({
+const styles = {
     container: {
         flex: 1,
         width: '100%',
         height: 100,
+        backgroundColor: colors.light.primary
     },
     titleContainer: {
         paddingHorizontal: 10,
         paddingTop: 10,
         paddingBottom: 10,
+        paddingLeft: 10,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        display: 'inline-flex',
+        width: '100%',
+        backgroundColor: colors.light.primary
+    },
+    titleTextContainer: {
+        alignItems: 'center',
     },
     titleIconContainer: {
         marginRight: 10,
@@ -92,4 +101,4 @@ const styles = StyleSheet.create({
         marginTop: 5,
         color: 'white'
     }
-});
+};
