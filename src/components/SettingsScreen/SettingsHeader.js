@@ -90,15 +90,18 @@ const styles = {
     nameText: {
         fontWeight: '600',
         fontSize: 18,
-        color: 'white'
+        color: 'white',
+        textAlign: 'left'
     },
     emailText: {
         color: 'white',
-        fontSize: 14
+        fontSize: 14,
+        textAlign: 'left'
     },
     descriptionText: {
         fontSize: 14,
         marginTop: 5,
+        textAlign: 'left',
         color: 'white'
     }
 };
