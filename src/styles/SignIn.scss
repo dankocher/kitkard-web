@@ -32,6 +32,9 @@
     height: 48px;
     margin-top: 10px;
     border-radius: 10px;
+    &::before {
+      border: 0 solid transparent !important;
+    }
   };
   .submitText {
     color: white;

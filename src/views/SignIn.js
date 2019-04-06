@@ -23,13 +23,13 @@ class SignIn extends Component {
         is_login: true
     };
 
-    setPassword(password) {
-        this.setState({password});
+    async setPassword(password) {
+        await this.setState({password});
         this.validate();
     }
 
-    setEmail(email) {
-        this.setState({email});
+    async setEmail(email) {
+        await this.setState({email});
         this.validate();
     }
     validate() {
