@@ -101,6 +101,7 @@ class Content extends Component {
             case "help": window.location = "/help"; break;
             case "policy": window.location = "/policy"; break;
             case "terms": window.location = "/terms"; break;
+            case "conditions": window.location = "/conditions"; break;
             case "logout":this.logout(); break;
             default: break;
         }
@@ -125,8 +126,8 @@ class Content extends Component {
                 <ScrollView style={{ flex: 1, width: '100%', backgroundColor: color.background}}>
 
                     <SettingsHeader/>
-                    {/*<SettingsItem item="cardholder"     onPress={this.action}/>*/}
-                    {/*<SettingsItem item="keepers"        onPress={this.action} separator={false}/>*/}
+                    <SettingsItem item="cardholder"     onPress={this.action}/>
+                    <SettingsItem item="keepers"        onPress={this.action} separator={false}/>
 
                     <SettingsSeparator title="settings"/>
                     <SettingsItem item="language"       onPress={this.action} rightText={getText(t, "current_language")}/>
@@ -145,8 +146,8 @@ class Content extends Component {
                     <SettingsItem item="about_kitkard"  onPress={this.action} icon={"kitkard_round"}/>
                     <SettingsItem item="help"           onPress={this.action} icon={"help"}/>
                     <SettingsItem item="policy"         onPress={this.action}/>
-                    <SettingsItem item="terms"          onPress={this.action} separator={false}/>
-                    {/*<SettingsItem item="permissions"    onPress={this.action} icon={"terms"} separator={false}/>*/}
+                    <SettingsItem item="terms"          onPress={this.action} />
+                    <SettingsItem item="conditions"     onPress={this.action} icon={"terms"} separator={false}/>
 
                     {
                         this.props.user == null ? null :

@@ -29,13 +29,11 @@ function AppRouter() {
 }
 
 
-const UNDER_CONSTRUCTION = true;
+const UNDER_CONSTRUCTION = false;
 
-function Home() {
-
-    // return <AppNavigator className='full-size'/>;
+function Home(props) {
     if (!UNDER_CONSTRUCTION) {
-        return <AppNavigator className='full-size' screen={this.props.screen}/>;
+        return <AppNavigator className='full-size' screen={props.location.path}/>;
     } else {
         return <UnderConstruction/>;
     }

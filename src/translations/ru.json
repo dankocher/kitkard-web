@@ -55,7 +55,7 @@
         "about_kitkard": "О Kitkard",
         "policy": "Конфиденциальность",
         "terms": "Соглашение",
-        "user_terms": "Данные пользователя",
+        "conditions": "Условия использования",
         "logout": "Выйти",
         "version": "Версия:  {{version}} ({{build}})",
         "copyright": "Kitkard © {{year}}. Все права защищены",
