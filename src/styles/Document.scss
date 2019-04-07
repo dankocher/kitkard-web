@@ -1,0 +1,37 @@
+.document {
+  text-align: left;
+  .header {
+    height: 48px;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    .logo {
+      padding-left: 10px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      .home-icon {
+        margin-right: 10px;
+      }
+    }
+    .max-content {
+      max-width: 1150px;
+      justify-content: left;
+      align-items: center;
+      display: flex;
+    }
+  }
+  .doc-content {
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .max-content {
+    max-width: 1100px;
+    width: 100%;
+  }
+
+}

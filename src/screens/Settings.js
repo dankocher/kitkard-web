@@ -97,6 +97,10 @@ class Content extends Component {
             case "clear_cache":this.clearCache(); break;
             case "clear_history":this.clearHistory(); break;
             case "share_kitkard":this.shareKitkard(); break;
+            case "about_kitkard": window.location = "/about"; break;
+            case "help": window.location = "/help"; break;
+            case "policy": window.location = "/policy"; break;
+            case "terms": window.location = "/terms"; break;
             case "logout":this.logout(); break;
             default: break;
         }
@@ -104,11 +108,6 @@ class Content extends Component {
 
     changeLanguage = () => {
         const t = translate[this.props.language];
-        // Modal.operation([
-        //     { text: <SelectLanguageItem Language={"English"} languageCode={"en"}/>, onPress: () => this.props.setLanguage('en') },
-        //     { text: <SelectLanguageItem Language={"Spanish"} languageCode={"es"}/>, onPress: () => this.props.setLanguage('es') },
-        //     { text: <SelectLanguageItem Language={"Russian"} languageCode={"ru"}/>, onPress: () => this.props.setLanguage('ru') }
-        // ]);
         Modal.operation([
             { text: getText(t, "english"), onPress: () => this.props.setLanguage('en') },
             { text: getText(t, "spanish"), onPress: () => this.props.setLanguage('es') },
@@ -144,6 +143,7 @@ class Content extends Component {
 
                     <SettingsSeparator title="documentation"/>
                     <SettingsItem item="about_kitkard"  onPress={this.action} icon={"kitkard_round"}/>
+                    <SettingsItem item="help"           onPress={this.action} icon={"help"}/>
                     <SettingsItem item="policy"         onPress={this.action}/>
                     <SettingsItem item="terms"          onPress={this.action} separator={false}/>
                     {/*<SettingsItem item="permissions"    onPress={this.action} icon={"terms"} separator={false}/>*/}

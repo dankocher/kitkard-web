@@ -1,21 +1,26 @@
 import React from "react";
-import {BrowserRouter, Switch, Route, Link, Redirect} from "react-router-dom";
+import {BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
 import AppNavigator from "./AppNavigator";
+import UnderConstruction from "../screens/UnderConstruction";
+import Document from "../screens/Document";
 
 function AppRouter() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={Home} className={"router"}/>
-                <Route exact path="/+:cardname" component={Home} className={"router"}/>
-                <Route exact path="/settings" component={Home} className={"router"}/>
-                <Route exact path="/notifications" component={Home} className={"router"}/>
-                <Route exact path="/search" component={Home} className={"router"}/>
-                <Route exact path="/cardholder" component={Home} className={"router"}/>
-                <Route exact path="/my_cards" component={Home} className={"router"}/>
+                <Route exact path="/" component={Home} screen={"my_cards"} className={"router"}/>
+                <Route exact path="/+:cardname" component={Home} screen={"my_cards"} className={"router"}/>
+                <Route exact path="/my_cards" component={Home} screen={"my_cards"} className={"router"}/>
+                <Route exact path="/settings" component={Home} screen={"settings"} className={"router"}/>
+                <Route exact path="/notifications" component={Home} screen={"notifications"} className={"router"}/>
+                <Route exact path="/search" component={Home} screen={"search"} className={"router"}/>
+                <Route exact path="/cardholder" component={Home} screen={"cardholder"} className={"router"}/>
 
-                <Route path="/policy" component={About} />
-                <Route path="/terms" component={Topics} />
+                <Route path="/help" component={Help} />
+                <Route path="/about" component={About} />
+                <Route path="/policy" component={Policy} />
+                <Route path="/terms" component={Terms} />
+                <Route path="/conditions" component={Conditions} />
                 <Route path="*" render={() => (<Redirect to="/" />)} />
                 {/*<Route path="*" component={NoMatch} />*/}
             </Switch>
@@ -23,55 +28,34 @@ function AppRouter() {
     );
 }
 
+
+const UNDER_CONSTRUCTION = true;
+
 function Home() {
-    return <AppNavigator className='full-size'/>;
+
+    // return <AppNavigator className='full-size'/>;
+    if (!UNDER_CONSTRUCTION) {
+        return <AppNavigator className='full-size' screen={this.props.screen}/>;
+    } else {
+        return <UnderConstruction/>;
+    }
+}
+
+function Help() {
+    // return <h2>Help</h2>;
+    return <Document document={"help"}/>;
 }
 function About() {
-    return <h2>About</h2>;
+    return <Document document={"about"}/>;
 }
-
-function Topic({ match }) {
-    return <h3>Requested Param: {match.params.id}</h3>;
+function Policy() {
+    return <Document document={"policy"}/>;
 }
-
-function Topics({ match }) {
-    return (
-        <div>
-            <h2>Topics</h2>
-
-            <ul>
-                <li>
-                    <Link to={`${match.url}/components`}>Components</Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-                </li>
-            </ul>
-
-            <Route path={`${match.path}/:id`} component={Topic} />
-            <Route
-                exact
-                path={match.path}
-                render={() => <h3>Please select a topic.</h3>}
-            />
-        </div>
-    );
+function Terms() {
+    return <Document document={"terms"}/>;
 }
-
-function Header() {
-    return (
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/about">About</Link>
-            </li>
-            <li>
-                <Link to="/topics">Topics</Link>
-            </li>
-        </ul>
-    );
+function Conditions() {
+    return <Document document={"conditions"}/>;
 }
 
 export default AppRouter;

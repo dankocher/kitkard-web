@@ -45,9 +45,9 @@ class UnderConstruction extends Component {
                 { this.state.userLanguage === "" ? null :
                     <div className="form">
                         <div className="kitkard-logo"/>
-                        <h4 className="under-construction">{translation.site_under_construction}</h4>
-                        <h5 className="tray-later">{translation.try_again_later}</h5>
-                        <h5 className="install-app">{translation.install_our_app}</h5>
+                        <h1 className="under-construction">{translation.site_under_construction}</h1>
+                        <h2 className="tray-later">{translation.try_again_later}</h2>
+                        <h2 className="install-app">{translation.install_our_app}</h2>
                         <div className="apps">
                             <div className="google">
                                 {

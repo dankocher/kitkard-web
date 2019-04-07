@@ -1,7 +1,7 @@
 const host = {
     // uri: "http://192.168.100.10:3000",
-    // uri: "https://kitkard.dankocher.net",
-    uri: "https://kitkard.com",
+    uri: "https://kitkard.dankocher.net",
+    // uri: "https://kitkard.com",
 };
 
 const api = {
@@ -38,6 +38,8 @@ const api = {
     sync_search: {method: "GET", uri: "/kit/user/sync_search/:search_updated"},
 
     share: {method: "PUT", uri: "/kit/share/"},
+
+    doc: {method: "GET", uri: "/kit/doc/:doc/:lang"},
 
 
 
