@@ -1,7 +1,7 @@
 const host = {
     // uri: "http://192.168.100.10:3000",
-    uri: "https://kitkard.dankocher.net",
-    // uri: "https://kitkard.com",
+    // uri: "https://kitkard.dankocher.net",
+    uri: "https://kitkard.com",
 };
 
 const api = {

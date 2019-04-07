@@ -4,10 +4,11 @@ import {connect} from "react-redux";
 import UnderConstruction from 'detect-browser-language';
 
 import './App.css';
-import Kitkard from "./Kitkard";
+import Kitkard from "./Adaptive";
 import detectBrowserLanguage from "detect-browser-language";
 import {setLanguage, setSession, setTheme, setUser} from "./redux/actions";
 import getValueOrDefault from "./utils/getValueOrDefault";
+import AppRouter from "./navigation/AppRouter";
 require('./styles/app.scss');
 
 const UNDER_CONSTRUCTION = false;
@@ -79,9 +80,10 @@ class App extends Component {
                     UNDER_CONSTRUCTION ?
                         <UnderConstruction/>
                         :
-                        <Kitkard className={"full-size"}/>
+                        <AppRouter className={'full-size'}/>
                 }
 
+                {/*<Kitkard className={"full-size"}/>*/}
             </div>
         );
     }

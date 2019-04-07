@@ -29,7 +29,7 @@ class ImageOffline extends React.Component {
         }
     }
 
-    componentWillMount(): void {
+    componentWillMount() {
         this.getPicture(this.props);
     }
 

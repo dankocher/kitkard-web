@@ -7,18 +7,21 @@ import colors from "../../constants/colors";
 import KitIcon from "../KitIcon";
 
 import '../../styles/TabBarItem.scss';
+import {Link} from "react-router-dom";
 
 class TabBarItem extends Component {
 
     render() {
-        const {theme, icon, selected} = this.props;
+        const {theme, icon, selected, selectedCard} = this.props;
         const color = colors[theme];
+
+        const path = icon === "my_cards" ? (selectedCard === null ? "" : "+"+selectedCard) : icon;
 
         return (
             <Flex.Item className="tabBar-item" style={{backgroundColor: color.tabBar}}>
-                <div className={'item-button'} onClick={() => this.props.onSelect(icon)}>
+                <Link to={`/${path}`} className={'item-button'} onClick={() => this.props.onSelect(icon)}>
                     <KitIcon name={icon} color={selected ? color.primary : color.icon} size={25} />
-                </div>
+                </Link>
             </Flex.Item>
         );
     }
@@ -26,6 +29,7 @@ class TabBarItem extends Component {
 
 const mapStateToProps = state => ({
     theme: state.theme,
+    selectedCard: state.selectedCard,
 });
 
 const mapDispatchToProps = dispatch => ({
