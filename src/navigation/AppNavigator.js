@@ -5,7 +5,7 @@ import connect from "react-redux/es/connect/connect";
 
 class AppNavigator extends Component {
 
-    componentDidMount() {
+    componentWillMount() {
         const location = window.location;
         switch (location.pathname) {
             case "/settings":
