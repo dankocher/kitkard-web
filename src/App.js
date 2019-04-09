@@ -6,6 +6,8 @@ import detectBrowserLanguage from "detect-browser-language";
 import {setLanguage, setSession, setTheme, setUser} from "./redux/actions";
 import getValueOrDefault from "./utils/getValueOrDefault";
 import AppRouter from "./navigation/AppRouter";
+import colors from "./constants/colors";
+import { withTheme, MuiThemeProvider } from '@material-ui/core/es/styles';
 require('./styles/app.scss');
 
 class App extends Component {
@@ -69,13 +71,16 @@ class App extends Component {
 
     render() {
         return (
+            <MuiThemeProvider theme={colors[this.props.theme]}>
             <div className="App">
                 <AppRouter className={'full-size'}/>
             </div>
+            </MuiThemeProvider>
         );
     }
 }
 
+App = withTheme()(App);
 // export default withCookies(App);
 const mapStateToProps = state => ({
     language: state.language,

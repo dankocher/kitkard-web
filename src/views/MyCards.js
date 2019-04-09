@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, StatusBar, View, Dimensions, TouchableOpacity } from 'react-native';
-import { ActionSheet, ActionSheetItem } from 'react-native-action-sheet-component';
-import {Text} from "react-native-elements";
-import { Header, Title, Subtitle } from "native-base";
 import { connect } from 'react-redux';
+import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 
 import colors from "../constants/colors";
 import translate from "../translations";
-import {dimensions} from '../constants/dimensions';
+
 import {
     saveFriend,
     saveSearch,
@@ -20,12 +17,9 @@ import {
     setUser
 } from "../redux/actions";
 
-import CardsContainerView from '../components/CardsContainerView';
-import {KitIcon} from "../components/KitIcon";
-import {getCardImage} from "../helpers/cardImage";
+import KitIcon from "../components/KitIcon";
 import CreateCard from "./CreateCard";
-import syncFriends from "../helpers/syncFriends";
-import syncNotifications from "../helpers/syncNotifications";
+import Header from "../components/Mobile/Header";
 
 class MyCards extends Component {
     state = {
@@ -45,112 +39,14 @@ class MyCards extends Component {
         }
     }
 
-    componentDidMount() {
-        this.sync();
-    }
-
-    async sync() {
-        await syncFriends(this.props);
-        await syncNotifications(this.props);
-    }
-
-    _renderHeader() {
-        const { user, theme } = this.props;
-        const color = colors[theme];
-        if (user.cards !== undefined && user.cards.length > 0) {
-            const cardname = this.props.selectedCard != null ? this.props.selectedCard : this.props.user.cards[0];
-
-            const card = this.props.cards[this.props.selectedCard];
-            return (
-                <View style={styles.header}
-                        placement="center">
-                    <TouchableOpacity style={styles.leftContainer} onPress={this.showTopActionSheet}>
-                        <View style={styles.leftContainer}>
-                            <View style={styles.left} onPress={this.showTopActionSheet}>
-                                {getCardImage(card, 30, true)}
-                            </View>
-                            <View style={styles.center}>
-                                <Title style={styles.headerTitle}>{`+${cardname || ""}`}</Title>
-                                {
-                                    card === undefined || card.name === "" ? null :
-                                        <Subtitle style={styles.headerSubtitle}>{card.name}</Subtitle>
-                                }
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => this.setState({ add_card: true }) } >
-                        <View style={styles.rightButton}>
-                            <KitIcon name="plus" size={30} color="white"/>
-                        </View>
-                    </TouchableOpacity>
-                </View>
-            );
-        } else {
-            return <View/>
-        }
-    }
-
-    showTopActionSheet = () => {
-        if (this.topActionSheet !== undefined)
-            this.topActionSheet.show();
-    };
-
-    onItemPress = (value) => {
-        this.props.selectCard(value);
-    };
-
-    getActionSheetItems(cards) {
-        if (cards !== undefined && cards != null && cards.length > 0) {
-            var items = [];
-
-            cards.forEach((cardname, key) => {
-                const card = this.props.cards[cardname];
-                items.push(
-                    <ActionSheetItem
-                        index={key}
-                        key={cardname}
-                        style={styles.actionSheetItem}
-                        textStyle={styles.actionSheetItemText}
-                        text={<Text style={styles.actionSheetItemText}>{`    +${cardname}`}</Text>}
-                        value={cardname}
-                        icon={getCardImage(card, 30, true)}
-                        showSelectedIcon={false}
-                        onPress={() => this.onItemPress(cardname)}
-                    />)
-            });
-            return items;
-        } else {
-            return <View/>;
-        }
-    }
-
-    _renderActionSheet(cards) {
-        if (this.props.user.cards.length > 1) {
-            return (
-                <ActionSheet
-                    style={styles.actionSheet}
-                    ref={(actionSheet) => {
-                        this.topActionSheet = actionSheet;
-                    }}
-                    position="top"
-                    onChange={this.onChange}
-                    showSeparator={false}
-                    showSparator={false}
-                    showSelectedIcon={false}
-                >
-                    {this.getActionSheetItems(cards)}
-                </ActionSheet>
-            );
-        } else {
-            return null;
-        }
-    }
-
     render() {
 
-        const {theme, language, user, selectedCard} = this.props;
+        const {theme, language, user, selectedCard, classes} = this.props;
         const t = translate[language];
         const color = colors[theme];
+
+
+        console.log(this.props);
 
         if (this.state.add_card) {
             return (
@@ -158,20 +54,49 @@ class MyCards extends Component {
             );
         } else {
             return (
-                <View style={styles.container}>
-                    {this._renderHeader()}
-                    <CardsContainerView
-                        navigation={this.props.navigation}
-                        user={user}
-                        position={selectedCard}
-                        setSelectedCard={(cardname) => this.onItemPress(cardname)}/>
-                    {this._renderActionSheet(user.cards)}
-                </View>
 
+                <div className={classes.container}>
+                    <Header
+                        leftComponent={<div className={classes.headerLeftComponent}>Left</div>}
+                        rightComponent={
+                            <div className={classes.headerRightButton}>
+                                <KitIcon name="plus" size={35} color={'white'}/>
+                            </div>
+                        }
+                    />
+                    <div className={classes.body}>
+                        My Cards
+                    </div>
+                </div>
             );
         }
     }
 }
+
+const styles = (theme) => ({
+    container: {
+        height: '100%',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column'
+    },
+    headerRightButton: {
+        height: '100%',
+        width: 48,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    headerLeftComponent: {
+        flex: 1,
+        height: '100%'
+    },
+    body: {
+        flex: 1,
+        backgroundColor: theme.background
+    }
+});
+
+MyCards = withStyles(styles, {name: 'MyCards', withTheme: true})(MyCards);
 
 const mapStateToProps = state => {
     return {
@@ -179,7 +104,6 @@ const mapStateToProps = state => {
         cards: state.cards,
         friends: state.friends,
         notifications: state.notifications,
-        theme: state.theme,
         language: state.language,
         selectedCard: state.selectedCard,
     }
@@ -201,7 +125,10 @@ export default connect(
     mapDispatchToProps
 )(MyCards)
 
-const styles = StyleSheet.create({
+
+
+/*
+const styles = {
     container: {
         flex: 1,
     },
@@ -259,4 +186,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     }
-});
+};
+*/

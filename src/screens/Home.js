@@ -6,6 +6,7 @@ import '../styles/Home.scss';
 import colors from "../constants/colors";
 import SignIn from "../views/SignIn";
 import CreateCard from "../views/CreateCard";
+import MyCards from "../views/MyCards";
 
 
 class Home extends Component {
@@ -18,7 +19,7 @@ class Home extends Component {
         } else if (user.cards === undefined || user.cards.length === 0) {
             return <CreateCard/>
         } else {
-            return <div>TODO: My Cards</div>;//<MyCards/>
+            return <MyCards/>;
             // return null
         }
     };

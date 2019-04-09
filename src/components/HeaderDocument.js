@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import kitkard_white from '../images/kitkard_white.svg';
 require('../styles/app.scss');
 
-const Header = () => (
+const HeaderDocument = () => (
     <React.Fragment>
       <div className="header">
         <div className="logo">
@@ -13,4 +13,4 @@ const Header = () => (
     </React.Fragment>
   );
 
-export default Header;
+export default HeaderDocument;

@@ -4,6 +4,7 @@
   "build": "210",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
     "antd": "^3.16.1",
     "antd-mobile": "^2.2.11",
     "detect-browser-language": "^0.0.1",
@@ -18,13 +19,14 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
+    "react-view-pager": "^0.6.0",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.6.0",
     "sass-loader": "^7.1.0"
   },
   "scripts": {
-    "start": "PORT=80 react-scripts start",
+    "start": "PORT=5000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
