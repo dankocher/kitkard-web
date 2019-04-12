@@ -20,6 +20,7 @@ import {
 import KitIcon from "../components/KitIcon";
 import CreateCard from "./CreateCard";
 import Header from "../components/Mobile/Header";
+import CardsContainerView from "../components/CardsContainerView";
 
 class MyCards extends Component {
     state = {
@@ -45,9 +46,6 @@ class MyCards extends Component {
         const t = translate[language];
         const color = colors[theme];
 
-
-        console.log(this.props);
-
         if (this.state.add_card) {
             return (
                 <CreateCard onCancel={() => this.setState({add_card: false})}/>
@@ -65,7 +63,7 @@ class MyCards extends Component {
                         }
                     />
                     <div className={classes.body}>
-                        My Cards
+                        <CardsContainerView/>
                     </div>
                 </div>
             );
@@ -83,11 +81,15 @@ const styles = (theme) => ({
     headerRightButton: {
         height: '100%',
         width: 48,
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
     },
     headerLeftComponent: {
         flex: 1,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         height: '100%'
     },
     body: {
