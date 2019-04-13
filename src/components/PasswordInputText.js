@@ -1,5 +1,5 @@
 import React from 'react';
-// import Icon from 'react-native-vector-icons/MaterialIcons';
+// import KitIcon from 'react-native-vector-icons/MaterialIcons';
 import KitIcon from './KitIcon';
 // import { View, StyleSheet, TextInput } from 'react-native';
 // import { InputItem } from 'antd-mobile';

@@ -1,0 +1,107 @@
+$duration: 800ms;
+$halfDuration: $duration / 2;
+$scale: 0.85;
+
+.card-flip {
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    .card-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //transition: transform ease-in-out $halfDuration;
+        transform-style: preserve-3d;
+        perspective: 2000px;
+        &.card-front {
+            //background-color: #0f9d58;
+        }
+        &.card-back {
+            //background-color: #0D47A1;
+        }
+    }
+
+    &.zoom-in {
+        transition: transform $halfDuration ease;
+    }
+    &.zoom-out {
+        transition: transform $halfDuration ease;
+    }
+
+    &.not-flipped {
+        &.zoom-in {
+            transform: scale(1);
+            .card-container {
+                transition: transform $halfDuration ease-out;
+                transform: scale(1);
+                &.card-front {
+                    z-index: 1;
+                    transform: rotateY(0deg);
+                    opacity: 1;
+                }
+                &.card-back {
+                    z-index: 0;
+                    transform: rotateY(180deg);
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+        }
+        &.zoom-out {
+            transform: scale($scale);
+            .card-container {
+                transition: transform $halfDuration ease-in;
+                transform: scale($scale);
+                &.card-front {
+                    z-index: 0;
+                    transform: rotateY(-90deg);
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                &.card-back {
+                    z-index: 1;
+                    transform: rotateY(90deg);
+                    opacity: 1;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    &.flipped {
+        &.zoom-in {
+            transform: scale(1);
+            .card-container {
+                transition: transform $halfDuration ease-out;
+                &.card-front {
+                    z-index: 0;
+                    transform: rotateY(180deg);
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                &.card-back {
+                    z-index: 1;
+                    transform: rotateY(0deg);
+                    opacity: 1;
+                }
+            }
+        }
+        &.zoom-out {
+            transform: scale($scale);
+            .card-container {
+                transition: transform $halfDuration ease-in;
+                &.card-front {
+                    z-index: 1;
+                    transform: rotateY(-90deg);
+                    opacity: 1;
+                    pointer-events: none;
+                }
+                &.card-back {
+                    z-index: 0;
+                    transform: rotateY(90deg);
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

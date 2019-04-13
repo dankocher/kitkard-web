@@ -4,16 +4,17 @@ import { selectCard } from "../redux/actions";
 import SwipeableViews from 'react-swipeable-views';
 import {connect} from "react-redux";
 import AspectRatio from "./AspectRatio";
+import CardView from "./Card/CardView";
 
 class CardsContainerView extends Component {
 
     renderCards() {
-        let cardViews = []
-
-        for(let i = 0; i < 3; i++) {
-            cardViews.push(<div key={`card-${i}`} className={this.props.classes.slide}>
+        let cardViews = [];
+// const cardname of this.props.user.cards
+        for(const cardname of this.props.user.cards) {
+            cardViews.push(<div key={`card-${cardname}`} className={this.props.classes.slide}>
                 <AspectRatio widthRatio={17} heightRatio={27}>
-                    <div>CARD {i}</div>
+                    <CardView cardname={cardname}/>
                 </AspectRatio>
             </div> )
         }

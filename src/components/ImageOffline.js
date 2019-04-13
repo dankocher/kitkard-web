@@ -1,5 +1,7 @@
 import React from 'react';
+import {View} from 'react-native';
 import  {host} from '../constants/api';
+import {Image} from 'react-native';
 // import {OfflineImage} from "react-native-image-offline";
 
 class ImageOffline extends React.Component {
@@ -88,10 +90,10 @@ class ImageOffline extends React.Component {
     render() {
         let style = this.props.style;
         return (
-        <span style={[defaultStyles.container, style]}>
+        <View style={[defaultStyles.container, style]}>
             {
                 // this.state.key === 'default' ?
-                    <img alt={this.state.key} src={this.state.source} style={style}/>
+                    <Image source={this.state.source} style={style}/>
                     // :
                     // <OfflineImage
                     //     key={this.state.key}
@@ -101,7 +103,7 @@ class ImageOffline extends React.Component {
                     // />
             }
 
-        </span>
+        </View>
         )
     }
 }
@@ -114,7 +116,7 @@ const defaultStyles = {
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-        overflow: 'hidden'
+        overflow: 'hidden',
     }
 };
 

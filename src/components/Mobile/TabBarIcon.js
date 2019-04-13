@@ -15,7 +15,7 @@ class TabBarIcon extends React.Component {
         }
     }
 
-    componentWillReceiveProps(nextProps: Readonly<P>, nextContext: any): void {
+    componentWillReceiveProps(nextProps, nextContext) {
         this.setState({
             newNotif: nextProps.notifications.filter(n => n.viewed === false || n.viewed === undefined).length
         })

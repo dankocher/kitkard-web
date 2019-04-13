@@ -44,7 +44,8 @@ class AspectRatio extends Component {
 
         return <div className={classes.container} ref={ (container) => this.container = container}>
             <div className={classes.content} style={{width: this.state.width, height: this.state.height}}>
-                {this.props.children}
+                {/*{this.props.children}*/}
+                {React.cloneElement(this.props.children, {...this.state})}
             </div>
         </div>;
     }
@@ -58,7 +59,8 @@ const styles = (theme) => ({
         width: '100%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden'
     },
     content: {
 
