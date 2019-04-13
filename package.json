@@ -16,8 +16,6 @@
     "react-cookie": "^3.1.2",
     "react-flippy": "^0.1.2",
     "react-native": "^0.59.4",
-    "react-native-card-flip": "^1.0.4",
-    "react-native-image-offline": "^0.1.7",
     "react-native-web": "^0.11.2",
     "react-redux": "^6.0.1",
     "react-render-html": "^0.6.0",
@@ -48,6 +46,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-plugin-import": "^1.11.0",
@@ -60,7 +61,14 @@
     "react-dom": "^16.6.0",
     "style-loader": "^0.23.1"
   },
+  "presets": [
+    [
+      "@babel/preset-env"
+    ]
+  ],
   "plugins": [
+    "@babel/transform-runtime",
+    "@babel/plugin-proposal-class-properties",
     [
       "import",
       {

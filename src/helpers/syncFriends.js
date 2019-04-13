@@ -7,23 +7,24 @@ const syncFriends = async (props, cardname)  => {
             await syncFriends(props, cardname);
         }
     } else {
-        const updated = props.cards[cardname].friends_updated || 0;
-        let res = await ajax(api.sync_friends, {
-            cardname: cardname,
-            updated: updated
-        });
-
-
-        if (res.ok && res.friends !== undefined) {
-            for (const friend of res.friends) {
-                props.saveFriend(friend);
-            }
-            props.saveCardParams({
+        if (props.cards[cardname] !== undefined) {
+            const updated = props.cards[cardname].friends_updated || 0;
+            let res = await ajax(api.sync_friends, {
                 cardname: cardname,
-                params: {
-                    friends_updated: res.updated
-                }
+                updated: updated
             });
+
+            if (res.ok && res.friends !== undefined) {
+                for (const friend of res.friends) {
+                    props.saveFriend(friend);
+                }
+                props.saveCardParams({
+                    cardname: cardname,
+                    params: {
+                        friends_updated: res.updated
+                    }
+                });
+            }
         }
     }
 };

@@ -21,12 +21,27 @@ class CardsContainerView extends Component {
         return cardViews;
     }
 
+    onChangeIndex = () => {
+        if (this.pager !== undefined) {
+            const index = this.pager.indexCurrent;
+            if (index >= 0 || index < this.props.user.cards.length) {
+                this.props.selectCard(this.props.user.cards[index]);
+            }
+        }
+
+    };
+
     render() {
 
         const {classes}  = this.props;
 
         return <div className={classes.container}>
-            <SwipeableViews className={classes.slider} slideClassName={classes.slider} containerStyle={{height: '100%'}}>
+            <SwipeableViews
+                ref={pager => this.pager = pager}
+                onTransitionEnd={this.onChangeIndex}
+                className={classes.slider}
+                slideClassName={classes.slider}
+                containerStyle={{height: '100%'}}>
                 {this.renderCards()}
             </SwipeableViews>
         </div>
