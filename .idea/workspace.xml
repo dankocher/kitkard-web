@@ -2,28 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297c40bb-477e-4ff0-8525-225fbe9657ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/EditCardView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/RightView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/RightViewNavigator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContactsListModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DraggableFlatList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EditCard/EditContact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EditCard/EditPicture.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EditCard/EditPrivate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EditCard/EditText.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SortableList/Row.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SortableList/SortableList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SortableList/shallowEqual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SortableList/swapArrayElements.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SpaceMono-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/icomoon.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/icomoon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/icomoon.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/icomoon.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/selection.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/selection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SpaceMono-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/selection.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/selection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/BigButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/BigButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card/CardBack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/CardBack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card/CardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/CardView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/KitIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KitIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Mobile/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mobile/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/MobileHeader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MobileHeader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/EditCardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/EditCardView.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,16 +29,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6405975">
+    <splitter split-orientation="horizontal" split-proportion="0.48857644">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/views/EditCardView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="655">
-                  <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+                <state relative-caret-position="389">
+                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
+                    <element signature="e#215#260#0" expanded="true" />
+                    <element signature="e#766#827#0" expanded="true" />
+                    <element signature="e#2537#3785#0" />
+                    <element signature="e#7110#7252#0" />
+                    <marker date="1555256837366" expanded="true" signature="2493:2596" ph="..." />
+                    <marker date="1555256837366" expanded="true" signature="11496:12622" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditContact.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="141">
+                  <caret line="95" column="27" lean-forward="true" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                    <element signature="e#215#259#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -53,8 +66,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Card/CardBack.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-706">
-                  <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+                <state relative-caret-position="462">
+                  <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
                   <folding>
                     <element signature="e#179#217#0" expanded="true" />
                   </folding>
@@ -63,61 +76,12 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Card/BigButton.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="760">
-                  <caret line="87" column="31" lean-forward="true" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/KitIcon.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/views/RightView.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/views/RightViewNavigator.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Card/CardView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+                <state relative-caret-position="570">
+                  <caret line="162" column="11" lean-forward="true" selection-start-line="162" selection-start-column="11" selection-end-line="162" selection-end-column="11" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
-                    <element signature="n#!!block;n#componentWillReceiveProps#0;n#CardView#0" />
                     <element signature="n#!!block;n#componentWillUnmount#0;n#CardView#0" />
                   </folding>
                 </state>
@@ -125,13 +89,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Mobile/Header.js">
+            <entry file="file://$PROJECT_DIR$/src/components/ContactsListModal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="926">
-                  <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="26">
+                  <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="312">
+                  <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -141,15 +111,6 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/constants/colors.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="338">
-                  <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/styles/CardFlip.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="403">
@@ -158,11 +119,147 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/styles/MobileHeader.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="358">
-                  <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+                  <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditPrivate.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="286">
+                  <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#141#184#0" expanded="true" />
+                    <element signature="n#!!block;n#constructor#0;n#EditPrivate#0" />
+                    <element signature="e#624#702#0" />
+                    <element signature="e#741#1049#0" />
+                    <element signature="e#788#858#0" />
+                    <element signature="e#1433#1617#0" />
+                    <element signature="e#2353#2530#0" />
+                    <element signature="e#2542#2550#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditContact.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="203">
+                  <caret line="66" column="43" lean-forward="true" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                    <element signature="e#215#259#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditPicture.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="733">
+                  <caret line="307" column="28" selection-start-line="307" selection-start-column="28" selection-end-line="307" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#292#333#0" />
+                    <element signature="n#!!block;n#constructor#0;n#EditPicture#0" />
+                    <element signature="e#994#1037#0" />
+                    <element signature="e#1069#1122#0" />
+                    <element signature="e#2504#2674#0" />
+                    <element signature="e#2568#2629#0" />
+                    <element signature="e#2707#2860#0" />
+                    <element signature="e#2894#3316#0" />
+                    <element signature="e#3025#3300#0" />
+                    <element signature="e#3116#3139#0" />
+                    <element signature="e#3354#3776#0" />
+                    <element signature="e#3433#3760#0" />
+                    <element signature="e#3506#3728#0" />
+                    <element signature="e#3805#5573#0" />
+                    <element signature="e#3909#5567#0" />
+                    <element signature="e#3937#5122#0" />
+                    <element signature="e#3992#4388#0" />
+                    <element signature="e#4404#4513#0" />
+                    <element signature="e#4526#4584#0" />
+                    <element signature="e#4603#4628#0" />
+                    <element signature="e#5135#5529#0" />
+                    <element signature="e#5189#5308#0" />
+                    <element signature="e#5324#5433#0" />
+                    <element signature="e#5446#5504#0" />
+                    <element signature="e#5542#5557#0" />
+                    <element signature="e#5613#6710#0" />
+                    <element signature="e#5728#5825#0" />
+                    <element signature="e#5945#6080#0" />
+                    <element signature="e#6137#6621#0" />
+                    <element signature="e#6180#6607#0" />
+                    <element signature="e#6240#6312#0" />
+                    <element signature="e#6651#6702#0" />
+                    <element signature="e#6750#6832#0" />
+                    <element signature="e#6868#7424#0" />
+                    <element signature="e#7063#7373#0" />
+                    <element signature="e#7128#7358#0" />
+                    <element signature="e#7162#7357#0" />
+                    <element signature="e#7465#7858#0" />
+                    <element signature="e#7589#7852#0" />
+                    <element signature="e#7690#7818#0" />
+                    <element signature="e#7894#8097#0" />
+                    <element signature="n#Row#0" />
+                    <element signature="n#!!block;n#constructor#0;n#Row#0" />
+                    <element signature="e#8253#9234#0" />
+                    <element signature="e#8286#9223#0" />
+                    <element signature="e#8309#8746#0" />
+                    <element signature="e#8342#8552#0" />
+                    <element signature="e#8343#8551#0" />
+                    <element signature="e#8401#8527#0" />
+                    <element signature="e#8613#8726#0" />
+                    <element signature="e#8774#9208#0" />
+                    <element signature="e#8807#9018#0" />
+                    <element signature="e#8808#9017#0" />
+                    <element signature="e#8866#8993#0" />
+                    <element signature="e#9076#9188#0" />
+                    <element signature="n#!!block;n#componentWillReceiveProps#0;n#Row#0" />
+                    <element signature="e#9338#9538#0" />
+                    <element signature="e#9382#9518#0" />
+                    <element signature="e#9832#9859#0" />
+                    <element signature="e#9878#9893#0" />
+                    <element signature="e#9904#9920#0" />
+                    <element signature="e#9931#9938#0" />
+                    <element signature="e#10038#10223#0" />
+                    <element signature="e#10233#10253#0" />
+                    <element signature="e#10514#10631#0" />
+                    <element signature="e#10656#10825#0" />
+                    <element signature="e#10730#10749#0" />
+                    <element signature="e#10837#11489#0" />
+                    <element signature="e#10847#10874#0" />
+                    <element signature="e#11158#11481#0" />
+                    <element signature="e#11177#11360#0" />
+                    <element signature="e#11384#11470#0" />
+                    <element signature="e#11502#11575#0" />
+                    <element signature="e#11595#11807#0" />
+                    <element signature="e#11831#12036#0" />
+                    <element signature="e#12055#12140#0" />
+                    <element signature="e#12160#12495#0" />
+                    <element signature="e#12375#12392#0" />
+                    <element signature="e#12509#12695#0" />
+                    <element signature="e#12713#12750#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditText.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="532">
+                  <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                    <element signature="e#1908#2135#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -180,20 +277,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>className</find>
-      <find>: {</find>
-      <find>justifyContent</find>
-      <find>space-</find>
-      <find>defaultProps</find>
-      <find>underlayColor</find>
-      <find>md5</find>
-      <find>borderRadius</find>
-      <find>width=device-width</find>
-      <find>&quot;</find>
-      <find>конф</find>
-      <find>&lt;Header</find>
-      <find>terms</find>
-      <find>KitIcon</find>
       <find>Platform</find>
       <find>import KitIcon</find>
       <find>../../assets</find>
@@ -210,6 +293,20 @@
       <find>selectCard</find>
       <find>flip</find>
       <find>back</find>
+      <find>iphone</find>
+      <find>this.props</find>
+      <find>react-native-modal</find>
+      <find>sortable-list</find>
+      <find>t.</find>
+      <find>add_conta</find>
+      <find>PanResponder</find>
+      <find>type</find>
+      <find>render</find>
+      <find>EditPicture</find>
+      <find>currentTheme</find>
+      <find>theme</find>
+      <find>onCha</find>
+      <find>onChange</find>
     </findStrings>
     <replaceStrings>
       <replace>center</replace>
@@ -224,6 +321,8 @@
       <replace>@ant-design/react-native</replace>
       <replace>import KitIcon</replace>
       <replace>../assets</replace>
+      <replace>this.ctx</replace>
+      <replace>theme</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -233,17 +332,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/screens/UnderConstruction.js" />
-        <option value="$PROJECT_DIR$/src/containers/Terms.js" />
-        <option value="$PROJECT_DIR$/src/screens/About.js" />
-        <option value="$PROJECT_DIR$/src/screens/Help.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/documents/terms.html" />
-        <option value="$PROJECT_DIR$/src/documents/conditions.html" />
-        <option value="$PROJECT_DIR$/src/documents/policy.html" />
-        <option value="$PROJECT_DIR$/src/screens/Document.js" />
-        <option value="$PROJECT_DIR$/src/styles/Document.scss" />
-        <option value="$PROJECT_DIR$/src/translations/ru.json" />
         <option value="$PROJECT_DIR$/src/translations/es.json" />
         <option value="$PROJECT_DIR$/src/translations/en.json" />
         <option value="$PROJECT_DIR$/src/screens/Settings.js" />
@@ -269,7 +357,6 @@
         <option value="$PROJECT_DIR$/src/components/Card/ContactView.js" />
         <option value="$PROJECT_DIR$/src/components/Card/CardFlip.js" />
         <option value="$PROJECT_DIR$/src/constants/dimensions.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/helpers/syncFriends.js" />
         <option value="$PROJECT_DIR$/src/helpers/syncNotifications.js" />
         <option value="$PROJECT_DIR$/src/views/MyCards.js" />
@@ -277,12 +364,24 @@
         <option value="$PROJECT_DIR$/src/views/EditCard.js" />
         <option value="$PROJECT_DIR$/src/views/RightViewNavigator.js" />
         <option value="$PROJECT_DIR$/src/views/RightView.js" />
-        <option value="$PROJECT_DIR$/src/components/Card/CardView.js" />
-        <option value="$PROJECT_DIR$/src/components/Card/CardBack.js" />
         <option value="$PROJECT_DIR$/src/components/Mobile/Header.js" />
         <option value="$PROJECT_DIR$/src/styles/MobileHeader.scss" />
         <option value="$PROJECT_DIR$/src/components/Card/BigButton.js" />
         <option value="$PROJECT_DIR$/src/components/KitIcon.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/ContactsListModal.js" />
+        <option value="$PROJECT_DIR$/src/components/DraggableFlatList.js" />
+        <option value="$PROJECT_DIR$/src/components/SortableList.js" />
+        <option value="$PROJECT_DIR$/src/components/SortableList/shallowEqual.js" />
+        <option value="$PROJECT_DIR$/src/components/SortableList/swapArrayElements.js" />
+        <option value="$PROJECT_DIR$/src/components/SortableList/Row.js" />
+        <option value="$PROJECT_DIR$/src/components/SortableList/SortableList.js" />
+        <option value="$PROJECT_DIR$/src/components/EditCard/EditText.js" />
+        <option value="$PROJECT_DIR$/src/components/EditCard/EditPicture.js" />
+        <option value="$PROJECT_DIR$/src/components/EditCard/EditPrivate.js" />
+        <option value="$PROJECT_DIR$/src/components/EditCard/EditContact.js" />
+        <option value="$PROJECT_DIR$/src/components/Card/CardBack.js" />
+        <option value="$PROJECT_DIR$/src/components/Card/CardView.js" />
         <option value="$PROJECT_DIR$/src/views/EditCardView.js" />
       </list>
     </option>
@@ -316,12 +415,6 @@
               <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -336,19 +429,14 @@
               <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="EditCard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kitkard-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SortableList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kitkard-web" type="b2602c69:ProjectViewProjectNode" />
@@ -386,18 +474,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/helphers" />
       <recent name="$PROJECT_DIR$/src/components/Card" />
       <recent name="$PROJECT_DIR$/src/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/SortableList" />
       <recent name="$PROJECT_DIR$/src/documents" />
       <recent name="$PROJECT_DIR$/src/screens" />
       <recent name="$PROJECT_DIR$/src/navigation" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -463,7 +551,7 @@
       <workItem from="1554350592309" duration="5671000" />
       <workItem from="1554372064256" duration="19952000" />
       <workItem from="1554877343583" duration="1168000" />
-      <workItem from="1555046704559" duration="43611000" />
+      <workItem from="1555046704559" duration="55400000" />
     </task>
     <task id="LOCAL-00001" summary="Added Redux, added adaptive">
       <created>1554390193618</created>
@@ -591,11 +679,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555174390364</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="RightView">
+      <created>1555239918897</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1555239918897</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153440000" />
+    <option name="totallyTimeSpent" value="165229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1375" extended-state="6" />
@@ -656,113 +751,10 @@
     <MESSAGE value="Fixed AspectRatio" />
     <MESSAGE value="Show My Cards" />
     <MESSAGE value="Show MyCards header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show MyCards header" />
+    <MESSAGE value="RightView" />
+    <option name="LAST_COMMIT_MESSAGE" value="RightView" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/PicturesModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="18" selection-start-line="18" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#176#217#0" expanded="true" />
-            <element signature="e#329#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/isCardholder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AspectRatio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Mobile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/navigation/AppRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adaptive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/2.4ba67f82.chunk.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Card/ContactView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="121" column="11" lean-forward="true" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#203#241#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Card/CardFlip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/navigation/AppNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1636">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CardsContainerView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1743">
-          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helpers/syncFriends.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
@@ -790,13 +782,6 @@
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -928,11 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/CreateCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2573" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/SignIn.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4331">
@@ -975,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/colors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/CardFlip.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -999,34 +972,12 @@
     <entry file="file://$PROJECT_DIR$/src/styles/colors.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Card/CardView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="n#!!block;n#componentWillReceiveProps#0;n#CardView#0" />
-            <element signature="n#!!block;n#componentWillUnmount#0;n#CardView#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Mobile/Header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="926">
           <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Card/CardBack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-706">
-          <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-          <folding>
-            <element signature="e#179#217#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1074,16 +1025,266 @@
     <entry file="file://$PROJECT_DIR$/src/styles/MobileHeader.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
-          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/CreateCard.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/translations/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DraggableFlatList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-sortable-list/src/SortableList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-sortable-list/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SortableList/swapArrayElements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SortableList/shallowEqual.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SortableList/Row.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SortableList/SortableList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/colors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditText.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#1908#2135#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditPicture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="733">
+          <caret line="307" column="28" selection-start-line="307" selection-start-column="28" selection-end-line="307" selection-end-column="28" />
+          <folding>
+            <element signature="e#292#333#0" />
+            <element signature="n#!!block;n#constructor#0;n#EditPicture#0" />
+            <element signature="e#994#1037#0" />
+            <element signature="e#1069#1122#0" />
+            <element signature="e#2504#2674#0" />
+            <element signature="e#2568#2629#0" />
+            <element signature="e#2707#2860#0" />
+            <element signature="e#2894#3316#0" />
+            <element signature="e#3025#3300#0" />
+            <element signature="e#3116#3139#0" />
+            <element signature="e#3354#3776#0" />
+            <element signature="e#3433#3760#0" />
+            <element signature="e#3506#3728#0" />
+            <element signature="e#3805#5573#0" />
+            <element signature="e#3909#5567#0" />
+            <element signature="e#3937#5122#0" />
+            <element signature="e#3992#4388#0" />
+            <element signature="e#4404#4513#0" />
+            <element signature="e#4526#4584#0" />
+            <element signature="e#4603#4628#0" />
+            <element signature="e#5135#5529#0" />
+            <element signature="e#5189#5308#0" />
+            <element signature="e#5324#5433#0" />
+            <element signature="e#5446#5504#0" />
+            <element signature="e#5542#5557#0" />
+            <element signature="e#5613#6710#0" />
+            <element signature="e#5728#5825#0" />
+            <element signature="e#5945#6080#0" />
+            <element signature="e#6137#6621#0" />
+            <element signature="e#6180#6607#0" />
+            <element signature="e#6240#6312#0" />
+            <element signature="e#6651#6702#0" />
+            <element signature="e#6750#6832#0" />
+            <element signature="e#6868#7424#0" />
+            <element signature="e#7063#7373#0" />
+            <element signature="e#7128#7358#0" />
+            <element signature="e#7162#7357#0" />
+            <element signature="e#7465#7858#0" />
+            <element signature="e#7589#7852#0" />
+            <element signature="e#7690#7818#0" />
+            <element signature="e#7894#8097#0" />
+            <element signature="n#Row#0" />
+            <element signature="n#!!block;n#constructor#0;n#Row#0" />
+            <element signature="e#8253#9234#0" />
+            <element signature="e#8286#9223#0" />
+            <element signature="e#8309#8746#0" />
+            <element signature="e#8342#8552#0" />
+            <element signature="e#8343#8551#0" />
+            <element signature="e#8401#8527#0" />
+            <element signature="e#8613#8726#0" />
+            <element signature="e#8774#9208#0" />
+            <element signature="e#8807#9018#0" />
+            <element signature="e#8808#9017#0" />
+            <element signature="e#8866#8993#0" />
+            <element signature="e#9076#9188#0" />
+            <element signature="n#!!block;n#componentWillReceiveProps#0;n#Row#0" />
+            <element signature="e#9338#9538#0" />
+            <element signature="e#9382#9518#0" />
+            <element signature="e#9832#9859#0" />
+            <element signature="e#9878#9893#0" />
+            <element signature="e#9904#9920#0" />
+            <element signature="e#9931#9938#0" />
+            <element signature="e#10038#10223#0" />
+            <element signature="e#10233#10253#0" />
+            <element signature="e#10514#10631#0" />
+            <element signature="e#10656#10825#0" />
+            <element signature="e#10730#10749#0" />
+            <element signature="e#10837#11489#0" />
+            <element signature="e#10847#10874#0" />
+            <element signature="e#11158#11481#0" />
+            <element signature="e#11177#11360#0" />
+            <element signature="e#11384#11470#0" />
+            <element signature="e#11502#11575#0" />
+            <element signature="e#11595#11807#0" />
+            <element signature="e#11831#12036#0" />
+            <element signature="e#12055#12140#0" />
+            <element signature="e#12160#12495#0" />
+            <element signature="e#12375#12392#0" />
+            <element signature="e#12509#12695#0" />
+            <element signature="e#12713#12750#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditPrivate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding>
+            <element signature="e#141#184#0" expanded="true" />
+            <element signature="n#!!block;n#constructor#0;n#EditPrivate#0" />
+            <element signature="e#624#702#0" />
+            <element signature="e#741#1049#0" />
+            <element signature="e#788#858#0" />
+            <element signature="e#1433#1617#0" />
+            <element signature="e#2353#2530#0" />
+            <element signature="e#2542#2550#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Card/CardBack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+          <folding>
+            <element signature="e#179#217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ContactsListModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Card/CardView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="162" column="11" lean-forward="true" selection-start-line="162" selection-start-column="11" selection-end-line="162" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="n#!!block;n#componentWillUnmount#0;n#CardView#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditCard/EditContact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="95" column="27" lean-forward="true" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#215#259#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/EditCardView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+        <state relative-caret-position="389">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#215#260#0" expanded="true" />
+            <element signature="e#766#827#0" expanded="true" />
+            <element signature="e#2537#3785#0" />
+            <element signature="e#7110#7252#0" />
+            <marker date="1555256837366" expanded="true" signature="2493:2596" ph="..." />
+            <marker date="1555256837366" expanded="true" signature="11496:12622" ph="..." />
           </folding>
         </state>
       </provider>

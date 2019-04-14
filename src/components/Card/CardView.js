@@ -244,7 +244,7 @@ class CardView extends Component {
             this.socket.emit('deleted');
         } if (updated !== undefined) {
             this.startCard();
-            // this.socket.emit('updated', {updated: updated});
+            this.socket.emit('updated', {updated: updated});
         }
     };
 

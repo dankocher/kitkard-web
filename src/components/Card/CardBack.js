@@ -73,7 +73,7 @@ class CardBack extends React.Component {
 
     componentDidMount() {
         //TODO: remove this
-        if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
+        // if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
     }
 
     _renderContact(item) {
@@ -145,11 +145,13 @@ const mapStateToProps = state => {
     return {
         user: state.user,
         theme: state.theme,
+        language: state.language,
         cards: state.cards,
     }
 };
 const mapDispatchToProps = dispatch => ({
     selectCard: cardname => dispatch(selectCard(cardname)),
+    saveCard: card => dispatch(saveCard(card)),
 });
 
 export default connect(
