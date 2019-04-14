@@ -23,7 +23,7 @@ const styles = (theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        zIndex: 10000,
+        // zIndex: 10000,
         backgroundColor: 'transparent'
     },
 });

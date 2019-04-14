@@ -1,10 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, Dimensions, TouchableOpacity, Image, Platform, Animated, Easing, Text, StatusBar, CameraRoll, Alert } from 'react-native';
-// import SortableList from 'react-native-sortable-list';
+import { StyleSheet, View, Dimensions, TouchableOpacity, Image, Platform, Animated, Easing, Text, Alert } from 'react-native';
 import SortableList from '../SortableList/SortableList'
 
-// import { connect } from 'react-redux';
-// import Modal from 'react-native-modal';
 import {Modal} from 'antd-mobile';
 
 import {KitIcon} from '../../components/KitIcon';
@@ -12,7 +9,6 @@ import colors from '../../constants/colors';
 import {api, host} from "../../constants/api";
 import translation, {tr} from '../../translations';
 import ImagePicker from 'react-native-image-crop-picker';
-import {saveCard} from "../../redux/actions";
 import {syncCard} from "../../helpers/sync";
 import ajax from "../../utils/ajax";
 
@@ -33,6 +29,12 @@ class EditPicture extends React.Component {
         this.setState({visibleModal: false});
     };
 
+    showModal = () => {
+        setTimeout(() => {
+            this.setState({visibleModal: true});
+        }, 100);
+    };
+
     onChangeOrder = async (nextOrder) => {
         let pictures = [];
         for (const i of nextOrder) {
@@ -42,7 +44,7 @@ class EditPicture extends React.Component {
     };
     onReleaseRow = async () => {
         this.card.updated = new Date().getTime();
-        await this.props.dispatch(saveCard(this.card));
+        await this.props.saveCard(this.card);
         syncCard(this.props, this.card)
     };
 
@@ -51,7 +53,6 @@ class EditPicture extends React.Component {
         const t = translation[this.props.language];
         return (
             <View style={[styles.modalContent, {backgroundColor: color.background}]}>
-                {/*<Text>Hello!</Text>*/}
                 {this.renderButton(t.picture_from_camera, "camera")}
                 {this.renderButton(t.picture_from_gallery, "picture")}
             </View>
@@ -71,6 +72,7 @@ class EditPicture extends React.Component {
     };
     addPicture = (from) => {
         this.setState({visibleModal: false});
+        /*
         const theme = colors[this.props.theme];
         switch (from) {
             case "picture":
@@ -115,6 +117,7 @@ class EditPicture extends React.Component {
                 break;
             default: break;
         }
+        */
     };
 
     uploadPicture = async (image) => {
@@ -140,7 +143,7 @@ class EditPicture extends React.Component {
                     }
 
                     this.card.pictures = [res.picture, ...this.card.pictures];
-                    await this.props.dispatch(saveCard(this.card));
+                    await this.props.saveCard(this.card);
                     await this.setState({pictures: this.card.pictures});
                     // syncCard(this.props, this.card);
                 }
@@ -182,7 +185,7 @@ class EditPicture extends React.Component {
             }
             return res;
         }
-    }
+    };
 
     render() {
         const color = colors[this.props.theme];
@@ -200,20 +203,33 @@ class EditPicture extends React.Component {
                     renderRow={this._renderRow} />
 
                 <TouchableOpacity style={[styles.buttonAddPicture, {backgroundColor: color.icon}]}
-                                  onPress={() => this.setState({visibleModal: true})}
+                                  onPress={() => this.showModal()}
                 >
                     <KitIcon name='camera' size={20} color='white'/>
                 </TouchableOpacity>
+
                 <Modal
-                    isVisible={this.state.visibleModal}
-                    swipeDirection='down'
-                    onSwipe={this.hideModal}
-                    onBackButtonPress={this.hideModal}
-                    onBackdropPress={this.hideModal}
-                    style={styles.bottomModal}
+                    popup
+                    maskClosable
+                    visible={this.state.visibleModal}
+                    onClose={() => this.hideModal()}
+                    animationType="slide-up"
+                    afterClose={() => { console.log('afterClose'); }}
                 >
                     {this.renderModalContent()}
                 </Modal>
+
+
+                {/*<Modal*/}
+                    {/*visible={this.state.visibleModal}*/}
+                    {/*swipeDirection='down'*/}
+                    {/*onSwipe={this.hideModal}*/}
+                    {/*onBackButtonPress={this.hideModal}*/}
+                    {/*onBackdropPress={this.hideModal}*/}
+                    {/*style={styles.bottomModal}*/}
+                {/*>*/}
+                    {/*{this.renderModalContent()}*/}
+                {/*</Modal>*/}
             </View>
         );
     };
@@ -282,18 +298,12 @@ class Row extends React.Component {
     render() {
         const {data} = this.props;
         const color = colors[this.props.theme];
-        console.log(this.props);
         return (
             <View style={[ styles.row ]}>
-            {/*<Animated.View style={[*/}
-                {/*styles.row,*/}
-        {/*this._style,*/}
-        {/*]}>*/}
-            <Image source={{uri: host.uri + "/pic/s/" + data}} style={[styles.image]} />
-            <TouchableOpacity style={styles.buttonDelete} onPress={() => this.props.onDelete(data)}>
-                <KitIcon name='delete' size={20} color='white'/>
-            </TouchableOpacity>
-        {/*</Animated.View>*/}
+                <Image source={{uri: host.uri + "/pic/s/" + data}} style={[styles.image]} />
+                <TouchableOpacity style={styles.buttonDelete} onPress={() => this.props.onDelete(data)}>
+                    <KitIcon name='delete' size={20} color='white'/>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -398,7 +408,8 @@ const styles = StyleSheet.create({
         height: 50,
         justifyContent: "flex-start",
         alignItems: "center",
-        flexDirection: 'row'
+        flexDirection: 'row',
+        paddingHorizontal: 10
     },
     buttonIcon: {
         paddingHorizontal: 15
