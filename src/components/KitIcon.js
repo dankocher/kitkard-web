@@ -1,12 +1,22 @@
 import React from 'react';
+import {View} from 'react-native';
 import PropTypes from 'prop-types';
 import IcomoonReact from 'icomoon-react';
 import iconSet from '../assets/selection.json';
 
-const KitIcon = (props) => {
-    const { color, size, name } = props;
-    return <IcomoonReact iconSet={iconSet} color={color} size={size} icon={name} />;
-};
+class KitIcon extends React.Component {
+
+    setNativeProps = (nativeProps) => {
+        this._root.setNativeProps(nativeProps);
+    };
+
+    render() {
+        const {color, size, name} = this.props;
+        return <View ref={component => this._root = component}>
+            <IcomoonReact iconSet={iconSet} color={color} size={size} icon={name}/>
+        </View>;
+    }
+}
 
 KitIcon.propTypes = {
     color: PropTypes.string,

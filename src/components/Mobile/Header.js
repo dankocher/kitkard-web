@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../styles/MobileHeader.scss';
+import {KitIcon} from "../KitIcon";
 
 class Header extends Component {
 
@@ -8,11 +9,21 @@ class Header extends Component {
         return (
             <div className={"header"}>
                 {
+                    this.props.onBack === undefined ? null :
+                        <div className={'header-back-button'} onClick={this.props.onBack}>
+                            <KitIcon name={'back'} color={'white'} size={24}/>
+                        </div>
+                }
+                <div className={'center-content'}>
+                {
                     leftComponent
                 }
+                </div>
+                <div className={'right-button'}>
                 {
                     rightComponent
                 }
+                </div>
             </div>
         );
     }

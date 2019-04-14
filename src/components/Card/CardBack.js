@@ -10,6 +10,9 @@ import BottomBar from './BottomBar';
 import CloseCardButton from "./CloseCardButton";
 import BigButton from "./BigButton";
 import ImageOffline from "../ImageOffline";
+import RightViewNavigator from '../../views/RightViewNavigator';
+import EditCardView from "../../views/EditCardView";
+import {addUserCard, saveCard, selectCard} from "../../redux/actions";
 
 class CardBack extends React.Component {
 
@@ -28,13 +31,17 @@ class CardBack extends React.Component {
     bigButtonEvent = (action) => {
         switch (action) {
             case "edit":
-                this.props.navigation.navigate('RightNavigator', {
-                    view: "edit_card",
-                    username: this.props.user.username,
-                    cardname: this.props.card.cardname,
-                    onChange: this.props.onChange,
-                    onDelete: this.onDelete,
-                });
+                RightViewNavigator(
+                    <EditCardView username={this.props.user.username} context={this.props}/>
+                   );
+
+                // this.props.navigation.navigate('RightNavigator', {
+                //     view: "edit_card",
+                //     username: this.props.user.username,
+                //     cardname: this.props.card.cardname,
+                //     onChange: this.props.onChange,
+                //     onDelete: this.onDelete,
+                // });
                 break;
             case "plus":
                 this.props.onAdd();
@@ -66,7 +73,7 @@ class CardBack extends React.Component {
 
     componentDidMount() {
         //TODO: remove this
-        // if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
+        if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
     }
 
     _renderContact(item) {
@@ -141,7 +148,14 @@ const mapStateToProps = state => {
         cards: state.cards,
     }
 };
-export default connect(mapStateToProps)(CardBack)
+const mapDispatchToProps = dispatch => ({
+    selectCard: cardname => dispatch(selectCard(cardname)),
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(CardBack)
 
 const styles = StyleSheet.create({
     face: {

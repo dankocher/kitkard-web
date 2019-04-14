@@ -1,12 +1,13 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
-
+import {StyleSheet, View, Text, TouchableHighlight} from 'react-native';
+import {Modal} from 'antd-mobile';
 import {KitIcon} from '../KitIcon';
 import colors from '../../constants/colors';
 import { connect } from 'react-redux';
 
 import {getOwnerCardname} from "../../helpers/isCardholder";
 import translate, {getText} from "../../translations";
+import {notifyToSocketSyncCardholder} from "../../helpers/sync";
 // import {Modal} from "@ant-design/react-native";
 // import {notifyToSocketSyncCardholder} from "../helpers/sync";
 
@@ -60,10 +61,9 @@ class BigButton extends React.Component {
             this.checkAction();
             // notifyToSocketSyncCardholder(getOwnerCardname(this.props.user, this.props.card.cardname))
         } else {
-            console.log("onPress", this.props.language)
             const t = translate[this.props.language];
-            // Modal.alert(null, getText(t, "login_first"),
-            //     [ { text: getText(t, "ok"), onPress: () => {return false;}, style: 'cancel' }] )
+            Modal.alert(null, getText(t, "login_first"),
+                [ { text: getText(t, "ok"), onPress: () => {return false;}, style: 'cancel' }] )
         }
     };
 
@@ -83,13 +83,13 @@ class BigButton extends React.Component {
                     }
                 </View>;
             default:
-                return <TouchableOpacity
+                return <TouchableHighlight
                     style={[styles.bigButton, {marginRight: isFront ? 15 : 0, borderColor: color.cardLines, backgroundColor: color.card}]}
                     hide={true}
                     underlayColor={color.cardLines}
                     onPress={this.onPress}>
                     <KitIcon name={this.state.action} size={20} color={color.icon}/>
-                </TouchableOpacity>
+                </TouchableHighlight>
         }
     }
 }

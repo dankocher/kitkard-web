@@ -35,6 +35,7 @@ class CardView extends Component {
         this.state = {
             type: '',
             showAddCard: false,
+            isFlipped: false,
             card: {
                 cardname: props.cardname,
                 updated: 0,
@@ -85,6 +86,11 @@ class CardView extends Component {
     componentDidMount() {
         // syncCard(this.props, this.props.card);
         this.startCard();
+        // setTimeout(() => {
+        //     if (this.cardname === "daniel") {
+        //         this.setState({isFlipped: true});
+        //     }
+        // }, 1000);
     }
 
     startCard = async () => {
@@ -113,7 +119,7 @@ class CardView extends Component {
             syncNotifications(this.props, this.cardname);
             syncFriends(this.props, this.cardname);
         }
-    }
+    };
 
     componentWillUnmount() {
         this.socket.disconnect();
