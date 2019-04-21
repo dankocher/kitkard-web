@@ -6,6 +6,7 @@ import connect from "react-redux/es/connect/connect";
 
 import Settings from "../../screens/Settings";
 import Home from "../../screens/Home";
+import UnderConstruction from "../../screens/UnderConstruction";
 
 class Content extends Component {
 
@@ -16,10 +17,10 @@ class Content extends Component {
     getScreen = () => {
         switch(this.props.screen) {
             case 'settings': return <Settings/>;
-            case 'notifications': return <div>Notifications</div>;
+            case 'notifications': return <UnderConstruction/>;
             case 'my_cards': return <Home/>;
-            case 'search': return <div>Search</div>;
-            case 'cardholder': return <div>Cardholder</div>;
+            case 'search': return <UnderConstruction/>;
+            case 'cardholder': return <UnderConstruction/>;
             default: return null;
         }
     };

@@ -1,0 +1,21 @@
+html {
+    background-color: #292727 !important;
+    body {
+        max-width: 420px;
+        max-height: 760px;
+        .desktop {
+            .mobile {
+                position: relative;
+            }
+
+            .under-construction-top-text {
+                position: fixed;
+                z-index: 999;
+                width: 100%;
+                left: 0;
+                top: 20px;
+                color: yellowgreen;
+            }
+        }
+    }
+}

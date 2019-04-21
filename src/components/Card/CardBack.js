@@ -65,9 +65,9 @@ class CardBack extends React.Component {
 
     componentDidMount() {
         //TODO: remove this
-        setTimeout(() => {
-            if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
-        }, 1000);
+        // setTimeout(() => {
+        //     if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
+        // }, 1000);
         // if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
     }
 
