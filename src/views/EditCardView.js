@@ -1,7 +1,5 @@
 import React from 'react';
-import {Alert, View, Text, TouchableOpacity} from "react-native";
-// import Touchable from 'react-native-platform-touchable';
-// import DraggableFlatList from 'react-native-draggable-flatlist';
+import {Alert, View, Text, TouchableOpacity, StyleSheet} from "react-native";
 
 import {withStyles} from "@material-ui/core";
 import colors from '../constants/colors';
@@ -14,10 +12,9 @@ import {api} from "../constants/api";
 import EditPicture from '../components/EditCard/EditPicture';
 import EditPrivate from '../components/EditCard/EditPrivate';
 import EditText from "../components/EditCard/EditText";
-// import ContactsListModal from "../components/ContactsListModal";
 import EditContact from "../components/EditCard/EditContact";
 import DraggableFlatList from "../components/DraggableFlatList";
-// import TouchableOpacity from "react-native-web/dist/exports/TouchableOpacity";
+import ContactsListModal from "../components/ContactsListModal";
 
 const animationDuration = 500;
 
@@ -26,19 +23,19 @@ class EditCardView extends React.Component {
     constructor(props) {
         super(props);
 
-        this.ctx  = props.context;
-        this.theme = colors[this.ctx.theme];
-        this.cardname = props.context.cardname;
-        this.card = props.context.cards[this.cardname];
-        this.onChange = props.context.onChange;
-        this.onDelete = props.context.onDelete;
+        this.__props  = props.__props;
+        this.theme = colors[this.__props.theme];
+        this.cardname = props.__props.cardname;
+        this.card = props.__props.cards[this.cardname];
+        this.onChange = props.__props.onChange;
+        this.onDelete = props.__props.onDelete;
 
         this.state = {
             showView: false,
             items: [],
             addContactsVisible: false,
             spinner: false,
-            card: this.ctx.cards[this.cardname]
+            card: this.__props.cards[this.cardname]
         }
     }
     componentDidMount() {
@@ -46,10 +43,10 @@ class EditCardView extends React.Component {
             this.setState({showView: true})
         }, 10);
 
-        this.getItems(this.ctx.cards[this.cardname]);
+        this.getItems(this.__props.cards[this.cardname]);
         setTimeout(() => {
             // TODO:
-            // this.ctx.navigation.setParams({ startDeleteCard: this.startDeleteCard })
+            // this.__props.navigation.setParams({ startDeleteCard: this.startDeleteCard })
         }, 1000);
     }
 
@@ -64,13 +61,15 @@ class EditCardView extends React.Component {
 
     componentWillMount() {
         this.setState({
-            card: this.ctx.cards[this.cardname]
+            card: this.__props.cards[this.cardname]
         })
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
         this.setState({card: nextProps.cards[this.cardname]})
         this.getItems();
+
+        console.log(nextProps);
     }
 
     // componentWillUnmount() {
@@ -78,7 +77,7 @@ class EditCardView extends React.Component {
     // }
 
     getItems() {
-        const card = this.ctx.cards[this.cardname];
+        const card = this.__props.cards[this.cardname];
         console.log(this.cardname);
         console.log(card);
         if (card === undefined) return;
@@ -113,7 +112,7 @@ class EditCardView extends React.Component {
     };
 
     startDeleteCard = async() => {
-        const t = translate[this.ctx.language];
+        const t = translate[this.__props.language];
         const cardname = this.cardname;
         Alert.alert( null, tr(t.delete_card_confirmation, {cardname: cardname}),
             [
@@ -128,15 +127,15 @@ class EditCardView extends React.Component {
                             updated = res.updated;
                         }
 
-                        await this.ctx.selectCard(this.ctx.user.cards[0]);
-                        await this.ctx.setUser({
-                            ...this.ctx.user,
+                        await this.__props.selectCard(this.__props.user.cards[0]);
+                        await this.__props.setUser({
+                            ...this.__props.user,
                             updated: updated,
-                            cards: this.ctx.user.cards.filter(c => c !== cardname)
+                            cards: this.__props.user.cards.filter(c => c !== cardname)
                         });
-                        await this.ctx.deleteCard(cardname);
+                        await this.__props.deleteCard(cardname);
                         this.setState({spinner: false});
-                        this.ctx.navigation.navigate("HomeNavigator");
+                        this.__props.navigation.navigate("HomeNavigator");
                     }},
             ],
             { cancelable: false }
@@ -150,36 +149,37 @@ class EditCardView extends React.Component {
     };
 
     getListItem = ({ item, index, move, moveEnd, isActive }) => {
-        // const card = this.ctx.cards[this.ctx.selectedCard];
+        // const card = this.__props.cards[this.__props.selectedCard];
         const card = this.state.card;
         switch(item.type)
         {
             case "pictures":
                 return (<EditPicture card={card}
-                                     user={this.ctx.user}
-                                     language={this.ctx.language}
-                                     theme={this.ctx.theme}
-                                     saveCard={this.ctx.saveCard}
+                                     user={this.__props.user}
+                                     language={this.__props.language}
+                                     theme={this.__props.theme}
+                                     saveCard={this.__props.saveCard}
                 />);
 
             case "is_private":
                 return (<EditPrivate cardname={this.cardname}
-                                     context={this.ctx}
-                                     user={this.ctx.user}
-                                     language={this.ctx.language}
-                                     theme={this.ctx.theme}
-                                     cards={this.ctx.cards}
-                                     saveCard={this.ctx.saveCard}
+                                     context={this.__props}
+                                     user={this.__props.user}
+                                     language={this.__props.language}
+                                     theme={this.__props.theme}
+                                     cards={this.__props.cards}
+                                     saveCard={this.__props.saveCard}
                 />);
 
             case "name": case "description":
             return (<EditText cardname={this.cardname}
                               type={item.type}
-                              user={this.ctx.user}
-                              language={this.ctx.language}
-                              theme={this.ctx.theme}
-                              cards={this.ctx.cards}
-                              saveCard={this.ctx.saveCard}
+                              user={this.__props.user}
+                              language={this.__props.language}
+                              theme={this.__props.theme}
+                              cards={this.__props.cards}
+                              saveCard={this.__props.saveCard}
+                              __props={this.__props}
             />);
 
             case "contact":
@@ -188,11 +188,12 @@ class EditCardView extends React.Component {
                                      move={move}
                                      moveEnd={moveEnd}
                                      isActive={isActive}
-                                     user={this.ctx.user}
-                                     language={this.ctx.language}
-                                     theme={this.ctx.theme}
-                                     cards={this.ctx.cards}
-                                     saveCard={this.ctx.saveCard}
+                                     user={this.__props.user}
+                                     language={this.__props.language}
+                                     theme={this.__props.theme}
+                                     cards={this.__props.cards}
+                                     saveCard={this.__props.saveCard}
+                                     __props={this.__props}
                 />);
             default: return null;
         }
@@ -208,7 +209,7 @@ class EditCardView extends React.Component {
                 style={{
                     height: 0.5,
                     width: "100%",
-                    backgroundColor:  colors[this.ctx.theme].cardLines,
+                    backgroundColor:  colors[this.__props.theme].cardLines,
                     marginLeft: "0%"
                 }}
             />
@@ -233,17 +234,17 @@ class EditCardView extends React.Component {
         this.state.card.contacts.byId[contact.id] = contact;
         this.state.card.contacts.ids.push(contact.id);
         this.state.card.updated = new Date().getTime();
-        await this.ctx.saveCard(card);
+        await this.__props.saveCard(card);
         // await this.getItems();
 
         this.forceUpdate();
 
         setTimeout(() => {
-            // this.ctx.navigation.navigate("EditContact", {contactId: contact.id, type: contact.type, cardname: this.cardname})
+            // this.__props.navigation.navigate("EditContact", {contactId: contact.id, type: contact.type, cardname: this.cardname})
             // TODO: add Contact
-            // this.ctx.navigation.navigate("NoAnimationNavigator", {
+            // this.__props.navigation.navigate("NoAnimationNavigator", {
             //     view: "contact",
-            //     title: translate[this.ctx.language]["contact_"+contact.type],
+            //     title: translate[this.__props.language]["contact_"+contact.type],
             //     contactId: contact.id,
             //     cardname: this.cardname
             // })
@@ -273,32 +274,36 @@ class EditCardView extends React.Component {
         this.state.card.contacts.ids = ids;
         this.state.card.updated = new Date().getTime();
         await this.forceUpdate();
-        this.ctx.saveCard(this.state.card);
+        this.__props.saveCard(this.state.card);
 
-        // saveUserCard(this.ctx, card);
+        // saveUserCard(this.__props, card);
     };
 
     onMoveContact = () => {
         console.log("OnMoveEvent")
     };
 
+    showContactsModalList = () => {
+        setTimeout(() => {
+            this.startAddContact(!this.state.addContactsVisible);
+        }, 100);
+    };
+
     render() {
         const {classes} = this.props;
-        const color = colors[this.ctx.theme];
-        const t = translate[this.ctx.language];
-        console.log(this.props)
-        console.log(this.ctx);
+        const color = colors[this.__props.theme];
+        const t = translate[this.__props.language];
         return(
             <div className={`${classes.container} ${this.state.showView ? classes.show : classes.hide}`} style={{backgroundColor: this.theme.primary}}>
                 <Header
                     onBack={this.close}
                     leftComponent={
                         <div className={classes.title}>
-                            +{this.ctx.cardname}
+                            +{this.__props.cardname}
                         </div>
                     }
                     rightComponent={
-                        this.ctx.cardname === this.ctx.username ? null :
+                        this.__props.cardname === this.__props.username ? null :
                         <div className={classes.deleteButton} >
                             <KitIcon name={'delete'} size={24} color={'white'}/>
                         </div>
@@ -317,30 +322,31 @@ class EditCardView extends React.Component {
                             onMoveEnd={this.changePosition}
                             scrollPercent={5}
                         />
-
                     </View>
-                    {/*<View style={[styles.bottomToolBar, {backgroundColor: color.tabbar}]}>*/}
-                        {/*<TouchableOpacity style={[styles.touchableBottom, {backgroundColor: color.tabbar, color: color.text}]}*/}
-                                   {/*iconName="plus" title="Add contact"*/}
-                                   {/*onPress={() => { this.startAddContact(!this.state.addContactsVisible); }}>*/}
-                            {/*<View style={styles.buttonContainer}>*/}
-                                {/*<KitIcon name="plus" size={20} color={color.primary}/>*/}
-                                {/*<Text style={{color: color.primary}}>{t.add_contact}</Text>*/}
-                            {/*</View>*/}
-                        {/*</TouchableOpacity>*/}
-                    {/*</View>*/}
-                    {/*<ContactsListModal*/}
-                        {/*addContactsVisible={this.state.addContactsVisible}*/}
-                        {/*onCancel={() => this.setState({addContactsVisible: false})}*/}
-                        {/*onSelect={(type) => this.addContact(type)}*/}
-                    {/*/>*/}
+                    <View  style={[classes.bottomToolBar, {backgroundColor: color.tabbar}]}>
+                        <TouchableOpacity style={[styles.touchableBottom, {backgroundColor: color.tabbar}]}
+                                   iconName="plus" title="Add contact"
+                                   onPress={() => this.showContactsModalList()}>
+                            <div className={classes.buttonContainer}>
+                                <KitIcon name="plus" size={20} color={color.primary}/>
+                                <Text style={{color: color.primary}}>{t.add_contact}</Text>
+                            </div>
+                        </TouchableOpacity>
+                    </View>
+                    <ContactsListModal
+                        addContactsVisible={this.state.addContactsVisible}
+                        onCancel={() => this.setState({addContactsVisible: false})}
+                        onSelect={(type) => this.addContact(type)}
+                        theme={this.__props.theme}
+                        language={this.__props.language}
+                    />
                 </div>
             </div>
         )
     }
 }
 
-const styles = theme => ({
+const __styles = theme => ({
    container: {
        position: 'absolute',
        width: '100%',
@@ -359,6 +365,7 @@ const styles = theme => ({
     viewContent: {
         display: 'flex',
         flex: 1,
+        flexDirection: 'column'
     },
     title: {
         flex: 1,
@@ -382,26 +389,17 @@ const styles = theme => ({
         width: "100%",
         marginLeft: "0%"
     },
-    bottomToolBar: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 50,
-        width: '100%'
-    },
     buttonContainer: {
         flex: 1,
+        display: "flex",
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
     },
-    touchableBottom: {
-        height: 40,
-        width: '100%'
-    }
 });
 
 
-EditCardView = withStyles(styles, {name: 'EditCardView', withTheme: true})(EditCardView);
+EditCardView = withStyles(__styles, {name: 'EditCardView', withTheme: true})(EditCardView);
 export default EditCardView;
 /*
 const mapStateToProps = state => {
@@ -421,3 +419,26 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(EditCardView)*/
+
+const styles = StyleSheet.create({
+
+    bottomToolBar: {
+        display: "flex",
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        width: '100%'
+    },
+    buttonContainer: {
+        flex: 1,
+        display: "flex",
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    touchableBottom: {
+        display: "flex",
+        height: 40,
+        width: '100%'
+    }
+});

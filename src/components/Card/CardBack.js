@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image, FlatList, TouchableHighlight} from 'react-native';
+import {StyleSheet, Text, View, FlatList} from 'react-native';
 // import { OfflineImage } from 'react-native-image-offline';
 import { connect } from 'react-redux';
 
@@ -32,7 +32,7 @@ class CardBack extends React.Component {
         switch (action) {
             case "edit":
                 RightViewNavigator(
-                    <EditCardView username={this.props.user.username} context={this.props}/>
+                    <EditCardView username={this.props.user.username} __props={this.props}/>
                    );
 
                 // this.props.navigation.navigate('RightNavigator', {
@@ -73,6 +73,9 @@ class CardBack extends React.Component {
 
     componentDidMount() {
         //TODO: remove this
+        setTimeout(() => {
+            if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
+        }, 1000);
         // if (this.props.card.cardname === "daniel") this.bigButtonEvent("edit");
     }
 

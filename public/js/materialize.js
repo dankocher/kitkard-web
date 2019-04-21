@@ -4951,7 +4951,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }, delay);
     },
 
-    // Little hack to make <input> can perform waves effect
+    // Little hack to make <__input> can perform waves effect
     wrapInput: function (elements) {
       for (var a = 0; a < elements.length; a++) {
         var el = elements[a];
@@ -4959,14 +4959,14 @@ $jscomp.polyfill = function (e, r, p, m) {
         if (el.tagName.toLowerCase() === 'input') {
           var parent = el.parentNode;
 
-          // If input already have parent just pass through
+          // If __input already have parent just pass through
           if (parent.tagName.toLowerCase() === 'i' && parent.className.indexOf('waves-effect') !== -1) {
             continue;
           }
 
           // Put element class and style to the specified parent
           var wrapper = document.createElement('i');
-          wrapper.className = el.className + ' waves-input-wrapper';
+          wrapper.className = el.className + ' waves-__input-wrapper';
 
           var elementStyle = el.getAttribute('style');
 
@@ -4976,7 +4976,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
           wrapper.setAttribute('style', elementStyle);
 
-          el.className = 'waves-button-input';
+          el.className = 'waves-button-__input';
           el.removeAttribute('style');
 
           // Put element as child
@@ -5067,7 +5067,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       Effect.duration = options.duration;
     }
 
-    //Wrap input inside <i> tag
+    //Wrap __input inside <i> tag
     Effect.wrapInput($$('.waves-effect'));
 
     if ('ontouchstart' in window) {
@@ -5078,7 +5078,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   };
 
   /**
-   * Attach Waves to an input element (or any element which doesn't
+   * Attach Waves to an __input element (or any element which doesn't
    * bubble mouseup/mousedown events).
    *   Intended to be used with dynamically loaded forms/inputs, or
    * where the user doesn't want a delegated click handler.
@@ -6472,7 +6472,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this37.count = 0;
       _this37.activeIndex = -1;
       _this37.oldVal;
-      _this37.$inputField = _this37.$el.closest('.input-field');
+      _this37.$inputField = _this37.$el.closest('.__input-field');
       _this37.$active = $();
       _this37._mousedown = false;
       _this37._setupDropdown();
@@ -6614,7 +6614,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           return;
         }
 
-        // Check if the input isn't empty
+        // Check if the __input isn't empty
         // Check if focus triggered by tab
         if (this.oldVal !== val && (M.tabPressed || e.type !== 'focus')) {
           this.open();
@@ -6769,7 +6769,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       /**
        * Render dropdown content
        * @param {Object} data  data set
-       * @param {String} val  current input value
+       * @param {String} val  current __input value
        */
 
     }, {
@@ -6915,7 +6915,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 ;(function ($) {
   // Function to update labels of text fields
   M.updateTextFields = function () {
-    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
+    var input_selector = '__input[type=text], __input[type=password], __input[type=email], __input[type=url], __input[type=tel], __input[type=number], __input[type=search], __input[type=date], __input[type=time], textarea';
     $(input_selector).each(function (element, index) {
       var $this = $(this);
       if (element.value.length > 0 || $(element).is(':focus') || element.autofocus || $this.attr('placeholder') !== null) {
@@ -7044,7 +7044,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   $(document).ready(function () {
     // Text based inputs
-    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
+    var input_selector = '__input[type=text], __input[type=password], __input[type=email], __input[type=url], __input[type=tel], __input[type=number], __input[type=search], __input[type=date], __input[type=time], textarea';
 
     // Add active if form auto complete
     $(document).on('change', input_selector, function () {
@@ -7054,7 +7054,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       M.validate_field($(this));
     });
 
-    // Add active if input element has been pre-populated on document ready
+    // Add active if __input element has been pre-populated on document ready
     $(document).ready(function () {
       M.updateTextFields();
     });
@@ -7110,7 +7110,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, true);
 
     // Radio and Checkbox focus class
-    var radio_checkbox = 'input[type=radio], input[type=checkbox]';
+    var radio_checkbox = '__input[type=radio], __input[type=checkbox]';
     $(document).on('keyup', radio_checkbox, function (e) {
       // TAB, check if tabbing to radio or checkbox.
       if (e.which === M.keys.TAB) {
@@ -7143,7 +7143,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     });
 
     // File Input Path
-    $(document).on('change', '.file-field input[type="file"]', function () {
+    $(document).on('change', '.file-field __input[type="file"]', function () {
       var file_field = $(this).closest('.file-field');
       var path_input = file_field.find('input.file-path');
       var files = $(this)[0].files;
@@ -7655,13 +7655,13 @@ $jscomp.polyfill = function (e, r, p, m) {
        */
       _this45.options = $.extend({}, Chips.defaults, options);
 
-      _this45.$el.addClass('chips input-field');
+      _this45.$el.addClass('chips __input-field');
       _this45.chipsData = [];
       _this45.$chips = $();
       _this45._setupInput();
       _this45.hasAutocomplete = Object.keys(_this45.options.autocompleteOptions).length > 0;
 
-      // Set input id
+      // Set __input id
       if (!_this45.$input.attr('id')) {
         _this45.$input.attr('id', M.guid());
       }
@@ -7764,7 +7764,7 @@ $jscomp.polyfill = function (e, r, p, m) {
             this.selectChip(index);
           }
 
-          // Default handle click to focus on input
+          // Default handle click to focus on __input
         } else {
           this.$input[0].focus();
         }
@@ -7872,7 +7872,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           this.$chips.add(chipEl);
         }
 
-        // move input to end
+        // move __input to end
         this.$el.append(this.$input[0]);
       }
 
@@ -7905,7 +7905,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _setupInput() {
         this.$input = this.$el.find('input');
         if (!this.$input.length) {
-          this.$input = $('<input></input>');
+          this.$input = $('<__input></__input>');
           this.$el.append(this.$input);
         }
 
@@ -8048,8 +8048,8 @@ $jscomp.polyfill = function (e, r, p, m) {
         var $chips = $(e.target).closest('.chips');
         var chipsKeydown = e.target && $chips.length;
 
-        // Don't handle keydown inputs on input and textarea
-        if ($(e.target).is('input, textarea') || !chipsKeydown) {
+        // Don't handle keydown inputs on __input and textarea
+        if ($(e.target).is('__input, textarea') || !chipsKeydown) {
           return;
         }
 
@@ -8730,10 +8730,10 @@ $jscomp.polyfill = function (e, r, p, m) {
     // Close when date is selected
     autoClose: false,
 
-    // the default output format for the input field value
+    // the default output format for the __input field value
     format: 'mmm dd, yyyy',
 
-    // Used to create date object from current input string
+    // Used to create date object from current __input string
     parse: null,
 
     // The initial date to view when first opened
@@ -9527,7 +9527,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
 
       /**
-       * Set input value to the selected date and close Datepicker
+       * Set __input value to the selected date and close Datepicker
        */
 
     }, {
@@ -9837,7 +9837,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         this.modalEl = this.$modalEl[0];
         this.modalEl.id = 'modal-' + this.id;
 
-        // Append popover to input by default
+        // Append popover to __input by default
         var containerEl = document.querySelector(this.options.container);
         if (this.options.container && !!containerEl) {
           this.$modalEl.appendTo(containerEl);
@@ -10196,7 +10196,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "done",
       value: function done(e, clearValue) {
-        // Set input value
+        // Set __input value
         var last = this.el.value;
         var value = clearValue ? '' : Timepicker._addLeadingZero(this.hours) + ':' + Timepicker._addLeadingZero(this.minutes);
         this.time = value;
@@ -11727,7 +11727,7 @@ $jscomp.polyfill = function (e, r, p, m) {
             var placeholderOption = $(this.dropdownOptions).find('li.disabled.selected');
             if (placeholderOption.length) {
               placeholderOption.removeClass('selected');
-              placeholderOption.find('input[type="checkbox"]').prop('checked', false);
+              placeholderOption.find('__input[type="checkbox"]').prop('checked', false);
               this._toggleEntryFromArray(placeholderOption[0].id);
             }
             selected = this._toggleEntryFromArray(key);
@@ -11813,7 +11813,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         this.$el.after(this.dropdownOptions);
 
-        // Add input dropdown
+        // Add __input dropdown
         this.input = document.createElement('input');
         $(this.input).addClass('select-dropdown dropdown-trigger');
         this.input.setAttribute('type', 'text');
@@ -11911,7 +11911,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         // Add disabled attr if disabled
         var disabledClass = option.disabled ? 'disabled ' : '';
         var optgroupClass = type === 'optgroup-option' ? 'optgroup-option ' : '';
-        var multipleCheckbox = this.isMultiple ? "<label><input type=\"checkbox\"" + disabledClass + "\"/><span>" + option.innerHTML + "</span></label>" : option.innerHTML;
+        var multipleCheckbox = this.isMultiple ? "<label><__input type=\"checkbox\"" + disabledClass + "\"/><span>" + option.innerHTML + "</span></label>" : option.innerHTML;
         var liEl = $('<li></li>');
         var spanEl = $('<span></span>');
         spanEl.html(multipleCheckbox);
@@ -11951,7 +11951,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         $optionLi.toggleClass('selected', notAdded);
 
         // Set checkbox checked value
-        $optionLi.find('input[type="checkbox"]').prop('checked', notAdded);
+        $optionLi.find('__input[type="checkbox"]').prop('checked', notAdded);
 
         // use notAdded instead of true (to detect if the option is selected or not)
         $optionLi.prop('selected', notAdded);
@@ -11960,7 +11960,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
 
       /**
-       * Set text value to input
+       * Set text value to __input
        */
 
     }, {
@@ -11998,7 +11998,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         for (var key in this._valueDict) {
           var option = this._valueDict[key];
           var optionIsSelected = $(option.el).prop('selected');
-          $(option.optionEl).find('input[type="checkbox"]').prop('checked', optionIsSelected);
+          $(option.optionEl).find('__input[type="checkbox"]').prop('checked', optionIsSelected);
           if (optionIsSelected) {
             this._activateOption($(this.dropdownOptions), $(option.optionEl));
             this._keysSelected[key] = true;
@@ -12370,5 +12370,5 @@ $jscomp.polyfill = function (e, r, p, m) {
     M.initializeJqueryWrapper(Range, 'range', 'M_Range');
   }
 
-  Range.init($('input[type=range]'));
+  Range.init($('__input[type=range]'));
 })(cash, M.anime);

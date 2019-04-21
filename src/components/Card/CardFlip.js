@@ -26,8 +26,7 @@ class CardFlip extends Component {
     }
 
     componentWillReceiveProps(nextProps, prevProps){
-        if (nextProps.isFlipped || false !== this.state.isFlipped) {
-            console.log("isFlipped", nextProps.isFlipped || false)
+        if (this.state.isFlipped !== nextProps.isFlipped) {
             this.flip();
         }
         this.startParams(nextProps);
@@ -51,10 +50,6 @@ class CardFlip extends Component {
             isFlipped: !this.state.isFlipped,
             zoomOut: true
         })
-    }
-
-    _flipTo(toValue){
-
     }
 
     render() {

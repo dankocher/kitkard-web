@@ -1,13 +1,24 @@
 import React from 'react';
+import {connect} from "react-redux";
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 // import Touchable from 'react-native-platform-touchable';
 // import {ListItem} from "react-native-elements";
 
 import colors from "../../constants/colors";
 import translate from "../../translations";
-import CONTACTS from "../../constants/contacts";
+import RightViewNavigator from "../../views/RightViewNavigator";
+import EditTextView from "../../views/EditTextView";
 
 class EditText extends React.Component {
+
+    state = {
+        value: ""
+    };
+
+    componentWillMount() {
+        const card = this.props.cards[this.props.cardname];
+        this.setState({value: card[this.props.type]});
+    }
 
     editText = async() => {
         /*await this.setState(previousState => {
@@ -15,12 +26,19 @@ class EditText extends React.Component {
         });
         this.card.is_private = this.state.is_private;
         this.props.dispatch(saveCard(this.card));*/
+        RightViewNavigator(
+            <EditTextView username={this.props.user.username} __props={{...this.props, ...{onChangeValue: this.onChangeValue}}}/>
+        );
         // TODO: navigation
         // this.props.navigation.navigate("NoAnimationNavigator", {
         //     title: translate[this.props.language][this.props.type],
         //     view: this.props.type,
         //     cardname: this.props.cardname
         // })
+    };
+
+    onChangeValue = (value) => {
+         this.setState({value});
     };
 
     render() {
@@ -39,7 +57,7 @@ class EditText extends React.Component {
                         {card[this.props.type]}
                     </Text>
                     <Text style={[styles.value, { color: color.text}]}>
-                        {card[this.props.type]}
+                        {this.state.value}
                     </Text>
                 </View>
                 {/*<ListItem*/}

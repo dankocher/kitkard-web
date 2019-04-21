@@ -108,7 +108,7 @@ class CardFront extends React.Component {
                         <Text style={[styles.cardname, {color: color.text}]}>{`+${cardname}`}</Text>
                         {
                             this.state.name === null ? null :
-                            <Text style={[styles.name, {color: color.text}]}>{this.state.name}</Text>
+                            <Text style={[styles.name, {color: color.text}]}>{card.name}</Text>
                         }
                     </View>
 

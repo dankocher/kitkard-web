@@ -40,3 +40,8 @@ html, body {
     width: 100% !important;
     height: 100% !important;
 }
+.modal-add-contact {
+    .am-modal-content {
+        background-color: transparent;
+    }
+}

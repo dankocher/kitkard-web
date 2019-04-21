@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, Platform, FlatList, Dimensions, Image, Touchable} from 'react-native';
+import {Text, View, StyleSheet, Platform, FlatList, Dimensions, Image, TouchableOpacity} from 'react-native';
 // import Modal from "react-native-modal";
 import {Modal} from 'antd-mobile';
 // import ExtraDimensions from 'react-native-extra-dimensions-android';
@@ -13,7 +13,7 @@ import translate from '../translations';
 import CONTACTS, {contactsList} from '../constants/contacts'
 
 const deviceWidth = Dimensions.get("window").width;
-const deviceHeight = Dimensions.get("screen").height;
+const deviceHeight = Dimensions.get("window").height;
 // const deviceHeight = Platform.OS === "ios"
 //     ? Dimensions.get("window").height
 //     : ExtraDimensions.get('REAL_WINDOW_HEIGHT');
@@ -52,14 +52,14 @@ class ContactsListModal extends React.Component {
         const t = translate[this.props.language];
         const contact = CONTACTS[item];
         return (
-            <Touchable
+            <TouchableOpacity
                 onPress={() => this.select(item)}
             >
                 <View style={[styles.item]}>
                     <Image style={styles.icon} source={contact.icon}/>
                     <Text style={[styles.text, {color: color.text}]}>{t["contact_"+contact.name]}</Text>
                 </View>
-            </Touchable>
+            </TouchableOpacity>
         );
     };
 
@@ -68,14 +68,13 @@ class ContactsListModal extends React.Component {
         const t = translate[this.props.language];
         return (
             <Modal
-                isVisible={this.props.addContactsVisible}
-                deviceHeight={deviceHeight}
-                deviceWidth={deviceWidth}
-                onBackdropPress={() => this.close()}
-                onBackButtonPress={() => this.close()}
-                // onModalShow={() => this.onShow()}
-                // onModalClose={() => this.onClose()}
-                useNativeDriver={true}
+                popup
+                transparent
+                visible={this.props.addContactsVisible}
+                onClose={() => this.close()}
+                animationType="slide-up"
+                afterClose={() => { console.log('afterClose'); }}
+                className={'modal-add-contact'}
             >
                 <View style={[styles.modalContainer]}>
                     <View style={[styles.contactsContainer, {backgroundColor: color.background}]}>
@@ -87,16 +86,17 @@ class ContactsListModal extends React.Component {
                             ItemSeparatorComponent={() => this.renderSeparator()}
                         />
                     </View>
-                    <Touchable style={[styles.cancel, {backgroundColor: color.background}]}
+
+                    <TouchableOpacity style={[styles.cancel, {backgroundColor: color.background}]}
                                onPress={() => this.close()}>
                         <Text style={{fontSize: 18, color: color.text}}>{t['cancel']}</Text>
-                    </Touchable>
+                    </TouchableOpacity>
                 </View>
             </Modal>
         );
     }
 }
-
+/*
 const mapStateToProps = state => {
     return {
         user: state.user,
@@ -105,29 +105,34 @@ const mapStateToProps = state => {
     }
 };
 export default connect(mapStateToProps)(ContactsListModal);
+*/
+
+export default ContactsListModal;
 
 const styles = StyleSheet.create({
     modal: {
         position: 'absolute',
-        top: 0
+        top: 0,
+        maxHeight: deviceHeight
     },
     modalContainer: {
         flex: 1,
         backgroundColor: 'transparent',
         justifyContent: 'center',
         alignItems: 'center',
+        maxHeight: deviceHeight
     },
     contactsContainer: {
         width: '90%',
-        height: '80%',
+        height: deviceHeight - 120,
         maxWidth: 350,
-        shadowColor: 'rgba(0,0,0,0.5)',
-        shadowOffset: {
-            width: 0,
-            height: 1
-        },
-        shadowOpacity: 0.8,
-        elevation: 6,
+        // shadowColor: 'rgba(0,0,0,0.5)',
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 1
+        // },
+        // shadowOpacity: 0.8,
+        // elevation: 6,
         borderRadius: 15,
         overflow: 'hidden'
     },
@@ -148,7 +153,6 @@ const styles = StyleSheet.create({
         width: '90%',
         height: 45,
         marginTop: 15,
-        fontSize: 20,
         maxWidth: 350,
         justifyContent: 'center',
         alignItems: 'center',
