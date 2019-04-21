@@ -12,7 +12,7 @@ import BigButton from "./BigButton";
 import ImageOffline from "../ImageOffline";
 import RightViewNavigator from '../../views/RightViewNavigator';
 import EditCardView from "../../views/EditCardView";
-import {addUserCard, saveCard, selectCard} from "../../redux/actions";
+import {saveCard, selectCard} from "../../redux/actions";
 
 class CardBack extends React.Component {
 
@@ -34,14 +34,6 @@ class CardBack extends React.Component {
                 RightViewNavigator(
                     <EditCardView username={this.props.user.username} __props={this.props}/>
                    );
-
-                // this.props.navigation.navigate('RightNavigator', {
-                //     view: "edit_card",
-                //     username: this.props.user.username,
-                //     cardname: this.props.card.cardname,
-                //     onChange: this.props.onChange,
-                //     onDelete: this.onDelete,
-                // });
                 break;
             case "plus":
                 this.props.onAdd();

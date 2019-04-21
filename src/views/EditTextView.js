@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, TextInput } from 'react-native';
-import { connect } from 'react-redux';
+import { StyleSheet, TextInput } from 'react-native';
 
 import colors from "../constants/colors";
-import {saveCard} from "../redux/actions";
 import Header from "../components/Mobile/Header";
-import KitIcon from "../components/KitIcon";
 import {withStyles} from "@material-ui/core";
 import translate, {getText} from "../translations";
 
@@ -38,12 +35,9 @@ class EditTextView extends Component {
 
     onChangeValue = async (value) => {
         await this.setState({ value });
-        // this.card[this.__props.type] = value;
-        // this.__props.saveCard(this.card);
     };
 
     close = () => {
-        // this.onChange(this.card.updated || this.card.date);
         this.setState({showView: false});
 
         if (this.originalValue !== this.state.value) {
@@ -54,7 +48,6 @@ class EditTextView extends Component {
                 [this.__props.type]: this.state.value,
                 updated: new Date().getTime()
             });
-            // saveCardSync(this.__props, this.card)
         }
 
         setTimeout(() => {
@@ -94,24 +87,6 @@ class EditTextView extends Component {
         );
     }
 }
-
-
-// const mapStateToProps = state => {
-//     return {
-//         user: state.user,
-//         cards: state.cards,
-//         language: state.language,
-//         theme: state.theme
-//     }
-// };
-// const mapDispatchToProps = dispatch => ({
-//     saveCard: card => dispatch(saveCard(card))
-// });
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(EditTextView)
-
-// export default withNamespaces(['profile', 'common'], {wait: true})(connect(mapStateToProps)(SignWithEmail))
-// export default withNamespaces(['profile', 'common'], {wait: true})(SignWithEmail);
 
 const __styles = theme => ({
     container: {

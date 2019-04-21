@@ -48,6 +48,7 @@ class EditText extends React.Component {
         );
     }
 };
+
 export default EditText;
 
 const styles = StyleSheet.create({

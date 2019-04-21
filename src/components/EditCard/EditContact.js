@@ -7,6 +7,9 @@ import colors from '../../constants/colors';
 import {KitIcon} from '../../components/KitIcon';
 import CONTACTS from "../../constants/contacts";
 import translate, {tr} from "../../translations";
+import RightViewNavigator from "../../views/RightViewNavigator";
+import EditTextView from "./EditText";
+import EditContactView from "../../views/EditContactView";
 // import {saveCard} from "../../redux/actions";
 
 class EditContact extends React.Component {
@@ -14,15 +17,31 @@ class EditContact extends React.Component {
     constructor(props) {
         super(props);
         this.card = props.card;
+
+        this.state = {
+            value: this.props.contact.value,
+            name: this.props.contact.name
+        }
     }
 
     editContact = async() => {
-        this.props.navigation.navigate("NoAnimationNavigator", {
-            view: "contact",
-            title: translate[this.props.language]["contact_"+this.props.contact.type],
-            contactId: this.props.contact.id,
-            cardname: this.card.cardname
-        })
+        RightViewNavigator(
+            <EditContactView username={this.props.user.username} __props={{
+                ...this.props,
+                onChangeValue: this.onChangeValue,
+                contactId: this.props.contact.id,
+                cardname: this.card.cardname
+            }}/>
+        );
+        // this.props.navigation.navigate("NoAnimationNavigator", {
+        //     view: "contact",
+        //     title: translate[this.props.language]["contact_"+this.props.contact.type],
+        //     contactId: this.props.contact.id,
+        //     cardname: this.card.cardname
+        // })
+    };
+    onChangeValue = (name, value) => {
+        this.setState({name, value});
     };
 
     deleteContact = async() => {
@@ -75,9 +94,9 @@ class EditContact extends React.Component {
                         <Image style={styles.icon} source={CONTACTS[contact.type].icon}/>
                         <View style={styles.data}>
                             <Text style={[styles.name, { color: color.textSoft, height: contact.name === "" ? 0 : 12 }]}>
-                                {contact.name === contact.type ? t['contact_'+contact.type] : contact.name}
+                                {this.state.name === contact.type ? t['contact_'+contact.type] : this.state.name}
                             </Text>
-                            <Text style={[styles.value, { color: color.textSoft }]}>{(CONTACTS[contact.type].short_prefix || "") + contact.value}</Text>
+                            <Text style={[styles.value, { color: color.textSoft }]}>{(CONTACTS[contact.type].short_prefix || "") + this.state.value}</Text>
                         </View>
                     </View>
                     <TouchableOpacity style={[styles.buttonAction, {paddingLeft: 10}]} activeOpacity={0.2} onPress={() => this.togglePrivate()}>
