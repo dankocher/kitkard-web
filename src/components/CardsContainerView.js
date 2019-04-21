@@ -11,12 +11,14 @@ class CardsContainerView extends Component {
     renderCards() {
         let cardViews = [];
 // const cardname of this.props.user.cards
-        for(const cardname of this.props.user.cards) {
-            cardViews.push(<div key={`card-${cardname}`} className={this.props.classes.slide}>
-                <AspectRatio widthRatio={17} heightRatio={27}>
-                    <CardView cardname={cardname}/>
-                </AspectRatio>
-            </div> )
+        if (this.props.user !== null) {
+            for (const cardname of this.props.user.cards) {
+                cardViews.push(<div key={`card-${cardname}`} className={this.props.classes.slide}>
+                    <AspectRatio widthRatio={17} heightRatio={27}>
+                        <CardView cardname={cardname}/>
+                    </AspectRatio>
+                </div>)
+            }
         }
         return cardViews;
     }

@@ -162,7 +162,7 @@ class SignIn extends Component {
                     onClick={() => this.toggleIsLogin()}>
                     <span className={'submitText'}>{this.state.is_login ? getText(t, 'register') : getText(t, 'sign_in')} </span>
                 </Button>
-                <div className={'socialButtons'}>
+                <div className={'socialButtons'} style={{opacity: 0}}>
                     <Button className={'social_button'}
                                onClick={this.googleSignIn}>
                         <div className={'social_button_container'}>

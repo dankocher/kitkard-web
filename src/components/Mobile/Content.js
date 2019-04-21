@@ -7,6 +7,7 @@ import connect from "react-redux/es/connect/connect";
 import Settings from "../../screens/Settings";
 import Home from "../../screens/Home";
 import UnderConstruction from "../../screens/UnderConstruction";
+import ModalCard from '../../components/ModalCard';
 
 class Content extends Component {
 
@@ -29,6 +30,7 @@ class Content extends Component {
         return (
             <div className={"content"}>
                 {this.getScreen()}
+                <ModalCard/>
             </div>
         );
     }

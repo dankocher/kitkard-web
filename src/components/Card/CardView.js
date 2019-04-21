@@ -102,7 +102,6 @@ class CardView extends Component {
         let res_upd = await ajax(api.sync_card, {cardname});
 
         if (res_upd.ok) {
-            console.log(res_upd.updated, this.state)
             if (res_upd.updated > this.state.card.updated) {
                 let res = await ajax(api.get_card, {cardname});
                 if (res.ok) {
@@ -258,6 +257,8 @@ class CardView extends Component {
 
         const {classes}  = this.props;
         const card = this.state.card;
+
+        console.log("card", card);
 
         return <div className={classes.container}>
 

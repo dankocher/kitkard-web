@@ -6,6 +6,7 @@ import SocketIOClient from 'socket.io-client';
 import syncUser from "../helpers/syncUser";
 import ajax from "../utils/ajax";
 import {api, host} from "../constants/api";
+import {isMyCard} from "../helpers/isMyCard";
 
 class AppNavigator extends Component {
 
@@ -31,6 +32,13 @@ class AppNavigator extends Component {
                 if (location.pathname.startsWith("/+")) {
                     this.props.setScreen("my_cards");
 
+                    let cardname = location.pathname.replace("/+", "");
+
+                    console.log('showCard', cardname);
+
+                    if (!isMyCard(this.props, cardname)) {
+
+                    }
                     //TODO: if is my card show it
                     //TODO: if is not my card show card in Modal
                 }
